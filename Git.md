@@ -1,30 +1,17 @@
 # Day1 (12/17)
 
+### 1. 파이썬 기초
+
 range가 list보다 메모리 효율이 좋다
 1~25는 메모리에서 쉽게 가져올 수 있도록 지정해 놓음
-공공데이터 포털 data.go.kr -> 오픈 API만 쓴다.(파일은 못 써먹음)
 
+#### 	1) python
 
-
-### 1. CLI (Command Line Interface)
-
-터미널(git bash/shell/cmd)을 통해서 명령을 할 수 있는 인터페이스
-
- 	1. [Git bash](https://gitforwindows.org)
-
-``` 
-$ ls
-```
-
-
-
-### 2. python
-
-​	0) [Python Style Guide(PEP-8)](https://www.python.org/dev/peps/pep-0008/)
+​	(0) [Python Style Guide(PEP-8)](https://www.python.org/dev/peps/pep-0008/)
 
 ​	파이썬에서 장려하는 스타일 가이드. indentation 같은거 들어있음. 가독성을 높이기 위해 알아야 함.
 
-​	1) string  조작
+​	(1) string  조작
 
 ```python
 # 기본 방법
@@ -49,9 +36,9 @@ print("""안녕하세요
 만나서 반갑습니다.
 ```
 
-​	2) String interpolation
+​	(2) String interpolation
 
-​		(1) fstring
+​		① fstring
 
 ```python
 name = "홍길동"
@@ -59,7 +46,7 @@ name = "홍길동"
  #=> "안녕하세요, 홍길동입니다."
 ```
 
-​		(2) [pyformat](https://pyformat.info/)
+​		② [pyformat](https://pyformat.info/)
 
 ```python
 name = "홍길동"
@@ -72,15 +59,14 @@ print("안녕하세요, {1}입니다. My name is {1}".format(name,english_name))
 #=> "안녕하세요, hong입니다. My name is hong"
 ```
 
- 3. 모르면 이렇게 하자
+​	(3) 모르면 이렇게 하자
 
-    ```python
-    name = "홍길동"
-    print("안녕하세요. " + name + "입니다.")
-    ```
+```python
+name = "홍길동"
+print("안녕하세요. " + name + "입니다.")
+```
 
-
-## 2) range
+#### 	2) range
 
 `range` 는 숫자의 범위를 가지고 있다.
 
@@ -101,7 +87,7 @@ for i in range(3):
 #=> 2    
 ```
 
-## 3) List
+#### 	3) List
 
 `list` 는 배열 또는 array라고도 불린다. 인덱스를 통해 값에 접근할 수 있다.
 
@@ -131,11 +117,7 @@ print(a)
 #[1,2,3]
 ```
 
-
-
-
-
-## 4) Dictionary
+#### 	4) Dictionary
 
 `Dictionary`는 hash(해시)라고도 불린다. `key`와 `value`가 짝지어져 있다.
 
@@ -150,103 +132,43 @@ phonebook{"중국집"}
 #=> "123-525"
 ```
 
-### 3. 마크 다운(Markdown)
-
-[가이드](http://www.markdownguide.org)
-
-#### 1) Heading
+#### 	5) 랜덤함수 
 
 ```
-# H1입니다.
-## H2입니다.
-### H3입니다.
-#### H4입니다.
-##### H5입니다.
+import random 랜덤 함수 사용 명령어
+random.choice(리스트)
+비복원 추출 : random.sample(리스트,갯수)
 ```
 
-# H1입니다.
-
-## H2입니다.
-
-### H3입니다.
-
-#### H4입니다.
-
-##### H5이무니다.
-
-#### 2) List
+	#### 	6) 정렬
 
 ```
-* 순서 없는 리스트
-* 순서 없는 리스트
+a=[4,1,2,5,6,1,23,5]
 
-1. 순서 있는 리스트1
-2. 순서 있는 리스트2
-3. 순서 있는 리스트3
+a.sort()  : 원본을 바꿈. None을 리턴(혼란방지)
+
+sorted(a) : 원본을 안바꿈. 바뀐것을 리턴
+
+어떤 것을 리턴하는 지 차이 있음.
 ```
 
-* 순서 없는 리스트
-* 순서 없는 리스트
 
-1. 순서 있는 리스트1
-2. 순서 있는 리스트2
-3. 순서 있는 리스트3
 
-#### 3)  코드 작성(Code snippet)
+### 2. GitHub
 
-```
-​```python
-print("hello, world")
-​```
-```
+​	1) CLI (Command Line Interface)
 
-```python
-print("hello, world")
-```
+터미널(git bash/shell/cmd)을 통해서 명령을 할 수 있는 인터페이스
 
-#### 4) 링크 연결
+​	2) [Git bash](https://gitforwindows.org)
 
 ```
-[구글로 가는 링크](https://google.com)
+$ ls
 ```
-
-[구글로 가는 링크](https://google.com)
-
-#### 5) 글씨 꾸미기
-
-```
-*안녕*or_안녕_
-**안녕**or__안녕__
-***안녕***or*__안녕__*
-```
-
-*안녕*
-
-**안녕**
-
-***안녕***
-
-#### 6) 기타
-
-```
----
-***
-> 안녕하세요?
-인용문 공간입니다.
-```
-
----
-
-***
-
-> 안녕하세요?
-> 인용문 공간입니다.
-
-siraj raval 유튜브 최신 기술 관련
 
 <<git 사용법>>
 ls (list)
-cd (creat directory)
+cd (폴더 접근 directory)
 touch : 파일 만들기
 mk dir : 폴더 만들기
 rm : 파일 지우기
@@ -257,35 +179,13 @@ pwd (present working director)
 
 
 
-마크다운
-
-ctrl+/ 화면 변환
-
-## 랜덤함수 
-
-import random 랜덤 함수 사용 명령어
-
-random.choice(리스트)
-
-비복원 추출 : random.sample(리스트,갯수)
-
-
-
-## 정렬
-
-a=[4,1,2,5,6,1,23,5]
-
-a.sort()  : 원본을 바꿈. None을 리턴(혼란방지)
-
-sorted(a) : 원본을 안바꿈. 바뀐것을 리턴
-
-어떤 것을 리턴하는 지 차이 있음.
-
-
-
 ## git
 
 분산형 버전 관리 시스템, 코드의  history를 관리하는 도구
+
+![git_flow](C:\Users\student\Desktop\TIL\pic\git_flow.PNG)
+
+<항상 작업흐름을 생각하자>
 
 ### git bash초기설정
 
@@ -323,8 +223,8 @@ $ touch a.txt
 $ git add .
 ```
 
-* git add a.txt해도 되지만, 우선 git add . 을 하자
-* `.`은 리눅스 상에서 현재 디렉토리를 뜻한다.
+- git add a.txt해도 되지만, 우선 git add . 을 하자
+- `.`은 리눅스 상에서 현재 디렉토리를 뜻한다.
 
 ### 3. git commit
 
@@ -349,15 +249,157 @@ $ git commit -m "커밋메시지"
 $ git remote add origin https://github.com/dmlimgo/TIL.git
 ```
 
-2. 원격 저장소로 보낸다.
+1. 원격 저장소로 보낸다.
 
 ```
 $ git push -u origin master
 ```
 
+1. 결과 화면
+
+```
+student@DESKTOP MINGW64 ~/Desktop/TIL (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   w2d1.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        Git.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+student@DESKTOP MINGW64 ~/Desktop/TIL (master)
+$ git add .
+
+student@DESKTOP MINGW64 ~/Desktop/TIL (master)
+$ git commit -m 'git 기초 추가'
+[master 273bc00] git 기초 추가
+ 2 files changed, 424 insertions(+), 8 deletions(-)
+ create mode 100644 Git.md
+
+student@DESKTOP MINGW64 ~/Desktop/TIL (master)
+$ git remote add origin https://github.com/dmlimgo/TIL.git
+
+student@DESKTOP MINGW64 ~/Desktop/TIL (master)
+$ git push -u origin master
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (9/9), 3.62 KiB | 3.62 MiB/s, done.
+Total 9 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), done.
+To https://github.com/dmlimgo/TIL.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+
+```
 
 
-## TIL
 
-today i learned
+### 
+
+
+공공데이터 포털 data.go.kr -> 오픈 API만 쓴다.(파일은 못 써먹음)
+
+
+
+### 3. 마크 다운(Markdown)
+
+[가이드](http://www.markdownguide.org)
+
+#### 	1) Heading
+
+```
+# H1입니다.
+## H2입니다.
+### H3입니다.
+#### H4입니다.
+##### H5입니다.
+```
+
+#### 	2) List
+
+```
+* 순서 없는 리스트
+* 순서 없는 리스트
+
+1. 순서 있는 리스트1
+2. 순서 있는 리스트2
+3. 순서 있는 리스트3
+```
+
+* 순서 없는 리스트
+* 순서 없는 리스트
+
+1. 순서 있는 리스트1
+
+2. 순서 있는 리스트2
+
+3. 순서 있는 리스트3
+
+   #### 3)  코드 작성(Code snippet)
+
+```
+​```python
+print("hello, world")
+​```
+```
+
+```python
+print("hello, world")
+```
+
+#### 	4) 링크 연결
+
+```
+[구글로 가는 링크](https://google.com)
+```
+
+[구글로 가는 링크](https://google.com)
+
+#### 	5) 글씨 꾸미기
+
+```
+*안녕*or_안녕_
+**안녕**or__안녕__
+***안녕***or*__안녕__*
+```
+
+*안녕*
+
+**안녕**
+
+***안녕***
+
+#### 	6) 문단 꾸미기
+
+```
+---
+***
+> 안녕하세요?
+인용문 공간입니다.
+```
+
+---
+
+***
+
+> 안녕하세요?
+> 인용문 공간입니다.
+
+	#### 	7) 기타
+
+```
+ctrl+/ 화면 변환
+```
+
+
+
 
