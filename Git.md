@@ -257,7 +257,7 @@ $ git push -u origin master
 
 1. 결과 화면
 
-```
+```powershell
 student@DESKTOP MINGW64 ~/Desktop/TIL (master)
 $ git status
 On branch master
@@ -303,18 +303,16 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 
 
-### 
-
 
 공공데이터 포털 data.go.kr -> 오픈 API만 쓴다.(파일은 못 써먹음)
 
 
 
-### 3. 마크 다운(Markdown)
+### 마크 다운(Markdown)
 
 [가이드](http://www.markdownguide.org)
 
-#### 	1) Heading
+#### 	1. Heading
 
 ```
 # H1입니다.
@@ -324,7 +322,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 ##### H5입니다.
 ```
 
-#### 	2) List
+#### 	2. List
 
 ```
 * 순서 없는 리스트
@@ -344,7 +342,7 @@ Branch 'master' set up to track remote branch 'master' from 'origin'.
 
 3. 순서 있는 리스트3
 
-   #### 3)  코드 작성(Code snippet)
+#### 3.  코드 작성(Code snippet)
 
 ```
 ​```python
@@ -356,7 +354,7 @@ print("hello, world")
 print("hello, world")
 ```
 
-#### 	4) 링크 연결
+#### 	4. 링크 연결
 
 ```
 [구글로 가는 링크](https://google.com)
@@ -364,7 +362,7 @@ print("hello, world")
 
 [구글로 가는 링크](https://google.com)
 
-#### 	5) 글씨 꾸미기
+#### 	5. 글씨 꾸미기
 
 ```
 *안녕*or_안녕_
@@ -378,7 +376,7 @@ print("hello, world")
 
 ***안녕***
 
-#### 	6) 문단 꾸미기
+#### 	6. 문단 꾸미기
 
 ```
 ---
@@ -394,12 +392,6 @@ print("hello, world")
 > 안녕하세요?
 > 인용문 공간입니다.
 
-	#### 	7) 기타
-
 ```
 ctrl+/ 화면 변환
 ```
-
-
-
-
