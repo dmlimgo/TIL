@@ -22,7 +22,7 @@ name                     : "Your Name"
 description              : "Dong Myeong E GGu"
 url                      : "https://dmlimgo.github.io"
 baseurl                  : "/TIL"
-repository               :"mmistakes/minimal-mistakes"
+repository               : "dmlimgo/TIL"
 teaser                   : "/assets/images/500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
