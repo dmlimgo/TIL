@@ -1,14 +1,16 @@
 # HTML/CSS 기초
 
-사용하기 전에
+[TOC]
+
+### 1. 기본 지식
 
 * 첫줄에 <!Doctype html>이라고 쓴다. 요샌 안해도 되는데 이게 기본
-* 3가지 추가기능 설치 
-  * HTML snippets
-  * HTML CSS Support
-  * Auto Close Tag
+* visual studio code에 3가지 추가기능 설치 
+  * `HTML snippets` : for, while 등과 같이 재사용 가능한 코드들의 모음.
+  * `HTML CSS Support` : CSS 지원인듯
+  * `Auto Close Tag` : close tag(ex.</html>)를 자동으로 붙여주는 기능
 
-기본 구조
+#### 1) 기본 구조
 
 ```html
 <!Doctype html>
@@ -26,7 +28,9 @@
 </html>
 ```
 
-CSS
+* `html:5`로도 생성 가능
+
+#### 2) CSS
 
 CSS (Cascading Sytle Sheets)의 약자, HTML과 같은 마크업 언어를 꾸며준다.
 
