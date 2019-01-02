@@ -2,9 +2,9 @@
 
 분산형 버전 관리 시스템, 코드의 history를 관리하는 도구
 
-![git_flow](C:\Users\student\Desktop\TIL\pic\git_flow.PNG)
+![git_flow](C:\Users\student\Desktop\TIL\picture\git_flow.PNG)
 
-![git_flow](C:\Users\Lim\Desktop\SSAFY\TIL\pic\git_flow.PNG)
+![git_flow](C:\Users\Lim\Desktop\SSAFY\TIL\picture\git_flow.PNG)
 
 
 
@@ -73,3 +73,20 @@ $ git clone 'github의 주소'
 `git init` 하지 말 것. 또 다른 repo가 생성된 것으로 간주되어 충돌 됨.
 
 작업 종료 후 push하면 됨.
+
+
+
+#### 4. 원격 저장소에서 가져오기
+
+```powershell
+$ git pull origin master
+```
+
+
+
+#### 5. 원격 저장소 복제하기
+
+```powershell
+$ git clone 주소복사
+```
+
