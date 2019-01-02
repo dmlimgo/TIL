@@ -6,13 +6,17 @@
 
 
 
-## 0. [Python Style Guide (PEP-8)](https://www.python.org/dev/peps/pep-0008/)
+## 0. 가이드 라인
 
-파이썬에서 장려하는 스타일 가이드. indentation(들여쓰기)와 같은 내용이 들어있음. 가독성을 높이기 위해 알아야 함.
+#### 1) [Python tutorial](https://docs.python.org/3/tutorial/index.html)
+
+#### 2) [Python Style Guide (PEP-8)](https://www.python.org/dev/peps/pep-0008/)
+
+* 파이썬에서 장려하는 스타일 가이드. indentation(들여쓰기)와 같은 내용이 들어있음. 가독성을 높이기 위해 알아야 함.
 
 
 
-### 1. 기본 단축키
+## 1. 기본 단축키
 
 `ctrl+/` : 주석 처리하기
 
@@ -34,6 +38,14 @@ print("""안녕하세요
 	만나서 반갑습니다.
 	""")
 ```
+
+```python
+#여러줄 출력은 \를 이용한다.
+print('\
+안녕')
+```
+
+
 
 ### 2) 문자열 안에 변수 출력하기 (String interpolation)
 
@@ -578,14 +590,12 @@ with open("ssafy.txt","r") as f:
 
 
 
-### 6) 자료형 함수
+### 6) map 함수 (알아두자)
 
 ```python
-map(변환하고자 하는 자료형, 변환하려는 리스트)
-# 리스트의 자료형을 변경
+map(함수, 반복 가능한 자료형)
+# 자료형의 자료에 대해 함수를 모두 실행한 후 결과를 리턴
 ```
-
-
 
 
 
@@ -920,11 +930,17 @@ print(type(a))
 print(f'오늘의 당번은 {random.choice(ssafy["classes"]["dj1"]["groups"]["3조"])}')
 ```
 
+### 3) W3D1 (2019.01.02)
+
+####  
+
+
+
 
 
 ## 9. 기타
 
-1~25의 값은 메모리에서 쉽게 가져올 수 있도록 주소가 지정되어 있다.
+-5~256의 값은 메모리에서 쉽게 가져올 수 있도록 주소가 지정되어 있다.
 
 ```python
 a = [3,1,2]

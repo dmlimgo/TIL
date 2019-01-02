@@ -1,5 +1,9 @@
 # Git
 
+[TOC]
+
+
+
 분산형 버전 관리 시스템, 코드의 history를 관리하는 도구
 
 ![git_flow](C:\Users\student\Desktop\TIL\picture\git_flow.PNG)
@@ -88,5 +92,22 @@ $ git pull origin master
 
 ```powershell
 $ git clone 주소복사
+```
+
+
+
+#### 6. 뺄것 빼고 푸시하기
+
+```powershell
+www.gitignore.io 접속
+> 파이썬에서는 이런걸 빼는게 좋아라는 걸 알려줌
+python을 치면
+밑에 jupyter notebook 항목 확인
+```
+
+```powershell
+폴더에 들어가서
+.gitignore라는 파일을 확장자 없이 생성
+폴더나 파일 입력하고 저장
 ```
 
