@@ -59,6 +59,8 @@ bashrc 파일을 생성한다.
 
 ```powershell
 $ vi ~/.bashrc
+혹은
+$ vi ~/.bash_profile # 선생님이 하신 방식
 ```
 
 bashrc 파일에 접근해서

@@ -384,7 +384,7 @@ else:
     print("아뇨 없습니다.")
 ```
 
-#### 3) set (집합)
+### 3) set (집합)
 
 * 중복된 값을 허락하지 않는 특성이 있다.
 
@@ -827,6 +827,30 @@ for i in range(10000000):
         lucky[4] += 1
     print(lucky, i, end='\r')
 ```
+
+짝수 홀수 저장
+
+```python
+# 1~100까지 숫자를
+# even이라는 list를 만들어서 짝수만 저장
+# odd라는 list를 만들어서 홀수만 저장
+```
+
+```python
+hundred = range(1,101)
+even=[]
+odd=[]
+for x in hundred:
+    if x%2==0:
+        even.append(x)
+    else:
+        odd.append(x)
+print(list(hundred))
+print(even)
+print(odd)
+```
+
+
 
 ### 2) Day5 (18.12.21) 예제
 

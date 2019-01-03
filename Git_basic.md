@@ -111,3 +111,12 @@ python을 치면
 폴더나 파일 입력하고 저장
 ```
 
+
+
+#### 7. 변경사항 없애기
+
+```powershell
+$ git stash # working directory에 있는 변경사항을 임시공간으로 옮겨둠.
+$ git stash pop # 변경사항이 다시 돌아옴?
+```
+
