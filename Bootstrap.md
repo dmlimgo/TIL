@@ -17,3 +17,19 @@
 마이너스 마진??
 
 * open in browser 다운로드 후 alt + b 누르면 바로 열림
+
+
+
+* 폰트 적용하기
+  - 구글 폰트에서 + 누르고 밑에 열어서
+  - @IMPORT내용을 Style에 복사
+  - Specify in CSS의 내용을 사용할 곳에 복사해서 사용
+
+CDN이 제공 안되면 css를 다운 받아야함.
+
+* animate.css
+  * animate.css에서 github들어가서 Usage > CDN버전 `header`에 붙이기
+  * 똑같이 class에 써주면 됨.
+* Font Awesome
+  * 똑같이 한줄 붙여주고 쓰면 됨
+* FLEXBOX FROGGY : 가지고노는 사이트
