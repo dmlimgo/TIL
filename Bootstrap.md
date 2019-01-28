@@ -33,3 +33,9 @@ CDN이 제공 안되면 css를 다운 받아야함.
 * Font Awesome
   * 똑같이 한줄 붙여주고 쓰면 됨
 * FLEXBOX FROGGY : 가지고노는 사이트
+
+
+
+* fixed-top 과 sticky-top의 차이!
+  - sticky-top은 영역을 가진다.
+  - fixed-top은 영역을 가지지 않는다. 떠있음
