@@ -120,3 +120,12 @@ $ git stash # working directory에 있는 변경사항을 임시공간으로 옮
 $ git stash pop # 변경사항이 다시 돌아옴?
 ```
 
+
+
+#### 8. 커밋 수정하기
+
+```bash
+$ git commit --amend
+```
+
+수정 후 exit 엔터
