@@ -1,45 +1,46 @@
 # Django2
 
-190218
+> 190218 강의내용
 
 ## MODEL 기초
 
-1. boards app 설정
+##### 1. boards app 설정
+
+```bash
+$ python manage.py startapp (app이름)
+```
+
+##### 2. app 등록
+
+```python
+# settings.py
+INSTALLED_APPS = [
+    # ...
+    'Boards',
+]
+```
+
+##### 3. Model 생성
+
+```python
+# boards/models.py
+class Board(models.Model):
+    # models 모듈의 Model 클래스를 상속받는다.
+    title = models.CharField(max_length=10) 
+    # CharField는 반드시 max_length를 해줘야 함
+    content = models.TextField()
+    creatd_at = models.DateTimeField(auto_now_add=True)
+```
+
+- DB의 컬럼과, 어떠한 타입으로 정의할 것인지에 대해 `django.db.models`를 활용하여 `Board` 클래스를 만든다.
+
+1. Migration 파일 생성
 
    ```bash
-   $ python manage.py startapp boards
-   ```
-
-2. app 등록
-
-   ```python
-   #settings.py
-   INSTALLED_APPS = [
-       # ...
-       'Boards',
-   ]
-   ```
-
-3. Model 생성
-
-   ```python
-   # boards/models.py
-   class Board(models.Model):
-       title = models.CharField(max_length=10) 
-       # CharField는 반드시 max_length를 해줘야 함
-       content = models.TextField()
-       creatd_at = models.DateTimeField(auto_now_add=True)
-   ```
-
-   - DB의 컬럼과, 어떠한 타입으로 정의할 것인지에 대해 `django.db.models`를 활용하여 `Board` 클래스를 만든다.
-
-4. Migration 파일 생성
-
-   ```python
    $ python manage.py makemigrations
    ```
 
-   - ㅜDB에 반영하기 전에, 현재 등록된 APP의 `models.py`를 바탕으로 DB 설계도를 작성한다.
+   - DB에 반영하기 전에, 현재 등록된 APP의 `models.py`를 바탕으로 DB 설계도를 작성한다.
 
    - `migrations`폴더에 `0001_initial.py` 파일들이 생성된다.
 
@@ -53,7 +54,7 @@
 
      
 
-5. DB에 반영
+2. DB에 반영
 
    ```bash
    $ python manage.py migrate
@@ -68,7 +69,7 @@
      - App이름(boards)와 migration버전(0001, 0002, ...)으로 명령어를 입력하면, 실제 데이터베이스에 적용되는 sql 커리를 확인할 수 있다.
      - `sqlmigrate` 명령어는 실제로 디비에는 반영되지 않는다. (단순 쿼리 확인)
 
-## 장고 orm 활용하기
+## 장고 ORM 활용하기
 
 > 시작하기에 앞서서 django shell에서 모델과 관련된 메소드를 활용하여 데이터베이스 조작을 해보자!
 
