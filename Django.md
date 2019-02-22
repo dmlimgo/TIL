@@ -169,6 +169,14 @@ $ python manage.py startapp home
 
 을 입력하면 home이라는 폴더가 생성된다.
 
+```
+어디있는지 몰라서 여기다 씀
+$ python manage.py makemigrations
+$ python manage.py migrate
+```
+
+...............................................................................................................
+
 ##### 1-4. view.py
 
 ```python
