@@ -1,7 +1,7 @@
-N = int(input())
-pick = list(map(int, input().split()))
-arr = list(range(1, N+1))
-print(arr)
-arr.insert(arr[3], 2)
-arr[]
-print(arr)
+snake = []
+snake.append((3,4))
+snake.append((1,2))
+snake.append((5,6))
+print(snake)
+snake.pop(0)
+print(snake)

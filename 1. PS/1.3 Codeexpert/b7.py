@@ -12,14 +12,22 @@ for n in range(N):
         end = x
     if x < start:
         start = x
-
     if y > max:
         max = y
         lmax_index = max_index = x
 
+sum += narr[max_index]
 
-print(max_index, max)
-print(sum)
+while True:
+    lmax = 0
+    if lmax_index == start:
+        break
+    for l in range(lmax_index-1, start-1, -1):
+        if narr[l] > lmax:
+            lmax = narr[l]
+            lindex = l
+    sum += lmax * (lmax_index - lindex)
+    lmax_index = lindex
 
 while True:
     rmax = 0
@@ -29,25 +37,12 @@ while True:
         if narr[r] > rmax:
             rmax = narr[r]
             rindex = r
-    sum += rmax * (end+1 - max_index)
-    print(sum)
+    sum += rmax * (rindex - max_index)
     max_index = rindex
-print(sum)
-
-h = narr[start]
-while True:
-    lmax = 0
-    if start == lmax_index:
-        break
-    for l in range(start, lmax_index+1):
-
-        if narr[l] > h:
-            h = narr[l]
-            start = l
-        sum += h
-
 
 print(sum)
+
+
 # while True:
 #     lmax = 0
 #     for l in range(max_index-1, 0, -1):
