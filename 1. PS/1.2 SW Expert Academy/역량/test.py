@@ -1,2 +1,2 @@
-for i in range(1, 1):
-    print('0')
+op = list(map(int, input().split()))
+print(op)
