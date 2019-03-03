@@ -1,2 +1,2 @@
-op = list(map(int, input().split()))
-print(op)
+for i in range(1, 0, -1):
+    print(i)
