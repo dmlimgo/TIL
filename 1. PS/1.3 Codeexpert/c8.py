@@ -1,13 +1,12 @@
 a, b = map(int, input().split())
 if a > b:
     a, b = b, a
-# sosu_cnt = 0
-# sosu_min = 1000001
-# sosu_max = -1000001
 num = [2]
 for i in range(3, b+1):
     cnt = 0
     for j in num:
+        if j > i ** (1 / 2):
+            break
         if i % j == 0:
             cnt = 1
             break
