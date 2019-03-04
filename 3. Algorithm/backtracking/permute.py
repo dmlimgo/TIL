@@ -23,7 +23,7 @@ def backtrack(a, k, size):
             a[k] = c[i]
             backtrack(a, k, size)
 
-data = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+data = [0, 1, 2, 3, 4]
 size = len(data)
 a = [0] * size
 result = []

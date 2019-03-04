@@ -19,9 +19,9 @@ def move():
         snake.pop(0)
     # 현재 장소 2로 칠하기
     area[y][x] = 2
-    for i in range(N+1):
-        print(area[i])
-    print(second, snake)
+    # for i in range(N+1):
+        # print(area[i])
+    # print(second, snake)
 
 N = int(input())
 area = [[0 for _ in range(N+1)] for _ in range(N+1)]

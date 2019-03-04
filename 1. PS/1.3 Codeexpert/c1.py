@@ -1,24 +1,37 @@
-def bs(s, e, d):
-    m = sol = -1
-    while s <= e:
-        m = (s + e)//2
-        if case[m] < d:
-            s = sol = m + 1
-        else:
-            e = m - 1
-        # print(s, m, e, d, sol)
-    return sol
+def findone(x, y):
+    for b in range(N):
+        for a in range(N):
+            if arr[b][a] == 1:
+                arr[b][a] = 0
+                return a, b
+    return -1, -1
+
+def shoot(x, y, d):
+    cnt = 0
+    while True:
+        newX = x + dx[d]
+        newY = y + dy[d]
+        if newX < 0 or newY < 0 or newX > N-1 or newY > N-1: return cnt
+        if arr[newY][newX] == 0: return cnt
+        elif arr[newY][newX] == 1: return cnt
+        elif arr[newY][newX] == 2:
+            arr[newY][newX] = 3
+            cnt += 1
+            x, y = newX, newY
+        elif arr[newY][newX] == 3:
+            x, y = newX, newY
 
 N = int(input())
-case = [0]
+arr = [[0 for _ in range(N)] for _ in range(N)]
 for n in range(N):
-    case.append(int(input()))
-case.sort()
-cnt = 0
-for i in range(1, N-1):
-    for j in range(i+1, N):
-        jump = case[j] - case[i]
-        cnt += bs(1, N, case[j] + 2*jump+1) - bs(1,N, case[j]+jump)
-        # print(cnt)
-print(cnt)
-# 1 3 4 7 10
+    arr[n] = list(map(int, list(input())))
+dx = [-1, -1, 0, 1, 1, 1, 0, -1]
+dy = [0, -1, -1, -1, 0, 1, 1, 1]
+x = y = 0
+kill = 0
+while True:
+    x, y = findone(x, y)
+    if x == -1 and y == -1: break
+    for d in range(8):
+        kill += shoot(x, y, d)
+print(kill)
