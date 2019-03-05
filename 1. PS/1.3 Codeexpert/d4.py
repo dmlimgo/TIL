@@ -1,37 +1,76 @@
 import sys
 sys.stdin = open('d4_input.txt')
 
-N, d, k, c = map(int, input().split())
-arr = []
-for n in range(N):
-    arr.append(int(input()))
-max = 0
+# def visit(num):
+#     global vary
+#     if num not in eaten:
+#         eaten[num] = 1
+#         vary += 1
+#     else:
+#         eaten[num] += 1
+#
+# def unvisit(num):
+#     global vary
+#     eaten[num] -= 1
+#     if eaten[num] == 0:
+#         vary -= 1
+#
+# N, d, k, c = map(int, input().split())
+# arr = []
+# for n in range(N):
+#     arr.append(int(input()))
+# maxval = 0
+#
+# eaten = [0 for _ in range(d+1)]
+# plate = arr[0:k] + [c]
+#
+# vary = 0
+# for sushi in plate:
+#     visit(sushi)
+# if maxval < vary:
+#     maxval = vary
+# for i in range(N):
+#     visit(arr[k])
+#     unvisit(arr[0])
+#     print(eaten)
+#     if maxval < vary:
+#         maxval = vary
+#     arr.append(arr.pop(0))
+# print(maxval)
 
-eat = arr[0:k] + [c]
-max = len(set(eat))
-for i in range(N):
-    eat.pop(0)
-    if i+k >= N:
-        index = (i+k) % N
-        eat.append(arr[index])
-    else:
-        eat.append(arr[i+k])
-    if max < len(set(eat)):
-        max = len(set(eat))
-print(max)
 
 
 
-#-----
+#----
 # eat = arr[0:k] + [c]
 # max = len(set(eat))
 # for i in range(N):
 #     eat.pop(0)
-#     eat.append(arr[k])
+#     if i+k >= N:
+#         index = (i+k) % N
+#         eat.append(arr[index])
+#     else:
+#         eat.append(arr[i+k])
 #     if max < len(set(eat)):
 #         max = len(set(eat))
-#     arr = arr[1:] + [arr[0]]
 # print(max)
+
+
+
+N, d, k, c = map(int, input().split())
+arr = []
+for n in range(N):
+    arr.append(int(input()))
+eat = arr[0:k]
+maxval = len(set(eat + [c]))
+for i in range(N):
+    eat.pop(0)
+    eat.append(arr[k])
+    length = len(set(eat + [c]))
+    if maxval < length:
+        maxval = length
+    arr.append(arr.pop(0))
+print(maxval)
 
 
 

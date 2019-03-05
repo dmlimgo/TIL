@@ -16,3 +16,6 @@ def solve(k, res):
 N = int(input())
 susik = list(input())
 solve(0, susik[0])
+
+
+

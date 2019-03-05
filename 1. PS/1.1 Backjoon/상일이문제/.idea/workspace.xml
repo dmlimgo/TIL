@@ -2,10 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dd32d50-0cb4-4fe1-bb49-26a8ce3e077f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/practice.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/1873.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/2624.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/2624.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/c5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/c5_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/jisu.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/permute4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/상일이문제.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/상일이문제.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/16637.py" beforeDir="false" afterPath="$PROJECT_DIR$/16637.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.2 SW Expert Academy/역량/4008_숫자만들기2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.2 SW Expert Academy/역량/4008_숫자만들기2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/1.3 Codeexpert.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/1.3 Codeexpert.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/c3_2621.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/2621.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/d4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/d4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/d4_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/d4_input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/backtracking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/backtracking.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,13 +32,53 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-1757115236">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="18" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="18" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="3" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/16637.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+            <state relative-caret-position="357">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/practice.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -33,12 +92,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/16637.py" />
+        <option value="$PROJECT_DIR$/practice.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1119" />
-    <option name="width" value="808" />
+    <option name="x" value="1016" />
+    <option name="width" value="911" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -47,6 +107,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -58,10 +119,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../3. Algorithm/backtracking" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunDashboard">
@@ -118,9 +179,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1119" y="0" width="808" height="1047" extended-state="0" />
+    <frame x="1016" y="0" width="911" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19480519" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17182131" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -139,11 +200,35 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/16637.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        <state relative-caret-position="357">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../1.2 SW Expert Academy/역량/4008_숫자만들기2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="40" selection-end-line="25" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../3. Algorithm/backtracking/permute3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
