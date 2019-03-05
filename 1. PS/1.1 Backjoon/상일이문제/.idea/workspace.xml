@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dd32d50-0cb4-4fe1-bb49-26a8ce3e077f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/practice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/1873.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/2624.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/2624.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/c5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/c5_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/jisu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/permute4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/상일이문제.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/상일이문제.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/16637.py" beforeDir="false" afterPath="$PROJECT_DIR$/16637.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.2 SW Expert Academy/역량/4008_숫자만들기2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.2 SW Expert Academy/역량/4008_숫자만들기2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/1.3 Codeexpert.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/1.3 Codeexpert.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/c3_2621.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/2621.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/d4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/d4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/d4_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/d4_input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1.3 Codeexpert/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1.3 Codeexpert/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/practice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/backtracking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/backtracking.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/permute4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../../3. Algorithm/backtracking/permute4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,44 +18,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-1757115236">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="18" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Python" value="18" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="3" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="3" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/16637.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="152">
+              <caret line="8" column="32" selection-end-line="74" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,8 +35,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/practice.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
+            <state relative-caret-position="122">
+              <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/p.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -93,12 +63,14 @@
       <list>
         <option value="$PROJECT_DIR$/16637.py" />
         <option value="$PROJECT_DIR$/practice.py" />
+        <option value="$PROJECT_DIR$/p.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1016" />
-    <option name="width" value="911" />
+    <option name="x" value="685" />
+    <option name="y" value="23" />
+    <option name="width" value="1210" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -107,7 +79,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -119,6 +90,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -137,7 +109,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.practice">
     <configuration name="16637" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="상일이문제" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,8 +131,30 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="practice" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="상일이문제" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/practice.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.practice" />
         <item itemvalue="Python.16637" />
       </list>
     </recent_temporary>
@@ -179,14 +173,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1016" y="0" width="911" height="1047" extended-state="0" />
+    <frame x="685" y="23" width="1210" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17182131" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12798634" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32968238" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.42606792" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -200,17 +195,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/16637.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../1.2 SW Expert Academy/역량/4008_숫자만들기2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -225,10 +210,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/16637.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="32" selection-end-line="74" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/p.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="9" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/practice.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        <state relative-caret-position="122">
+          <caret line="17" column="37" selection-start-line="17" selection-start-column="37" selection-end-line="17" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -2,29 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="758e48cc-197f-45a4-a0d1-5145f2ce228b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/practice.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/1873.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/2624.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/2624.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/c5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/c5_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jisu.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/permute4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/.idea/상일이문제.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/.idea/상일이문제.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/16637.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/16637.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1. PS/1.2 SW Expert Academy/역량/4008_숫자만들기2.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.2 SW Expert Academy/역량/4008_숫자만들기2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/.idea/1.3 Codeexpert.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/.idea/1.3 Codeexpert.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/c3_2621.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/2621.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/d4.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/d4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/d4_input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/d4_input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.3 Codeexpert/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/practice.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../1. PS/1.1 Backjoon/상일이문제/practice.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/backtracking.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backtracking.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/permute4.py" beforeDir="false" afterPath="$PROJECT_DIR$/permute4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,46 +18,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="2135971956">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="7" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="dummy" value="4" />
-          <entry key="py" value="881" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="881" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/permute3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+            <state relative-caret-position="209">
+              <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -79,13 +32,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/permute4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-              <folding>
-                <marker date="1551774092924" expanded="true" signature="304:311" ph="..." />
-                <marker date="1551774092924" expanded="true" signature="304:621" ph="..." />
-                <marker date="1551774092924" expanded="true" signature="304:625" ph="..." />
-              </folding>
+            <state relative-caret-position="266">
+              <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -106,8 +54,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="644" />
-    <option name="width" value="1283" />
+    <option name="x" value="958" />
+    <option name="width" value="969" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -237,15 +185,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="644" y="0" width="1283" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="958" y="0" width="969" height="1047" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12610441" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16863587" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34210527" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.34173056" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991228" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -258,9 +205,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/permute2.py">
@@ -278,20 +222,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/permute3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" lean-forward="true" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        <state relative-caret-position="209">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/permute4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
-          <folding>
-            <marker date="1551774092924" expanded="true" signature="304:311" ph="..." />
-            <marker date="1551774092924" expanded="true" signature="304:621" ph="..." />
-            <marker date="1551774092924" expanded="true" signature="304:625" ph="..." />
-          </folding>
+        <state relative-caret-position="266">
+          <caret line="14" column="13" lean-forward="true" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>

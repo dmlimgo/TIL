@@ -1,17 +1,23 @@
 def solve(pos, res):
     global N
-    if pos == N:
-        print(res)
-    for i in range(N):
-        if not visit[i]:
+    # if pos == N:
+    #     print(res)
+    print(pos, res)
+    for i in range(1, N, 2):
+        if not visit[i] and num[i] > res[-1] + 3:
             visit[i] = 1
             solve(pos + 1, res+[num[i]])
             visit[i] = 0
 
-N = 4
-num = [1, 2, 3, 4]
+N = 10
+num = list(range(N))
 visit = [0] * N
-solve(0, [])
+print(N, num)
+for i in range(1, N, 2):
+    visit[i] = 1
+    solve(0, [i])
+    visit[i] = 0
+
 
 
 # def solve(pos, n1, n2, n3, n4, res):
