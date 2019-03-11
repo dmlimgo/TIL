@@ -2,19 +2,31 @@
 
 > 19.02.11 내용
 
-MVC (Model View Controller)를 MTV (Model Template View)라고 부름.
+[TOC]
 
-`프로젝트` 안에 여러 `app`이 있는 구조
+## 0. Hello, Django
 
-`app` 안에는 M, T, V가 하나씩 들어있다.
+>  MVC (Model View Controller)를 MTV (Model Template View)라고 부름.
+>
+>  `project` 안에 여러 `app`이 있는 구조
+>
+>  `app` 안에는 `M`, `T`, `V`가 하나씩 들어있다.
+>
+>  #### M (Model) : 어플리케이션의 핵심 로직의 동작을 수행한다.
+>
+>  T (Template) : 사용자에게 결과물을 보여준다.
+>
+>  V (View) : 모델과 템플릿의 동작을 제어한다. (모델의 상태를 변경하거나 값을 가져오고, 템플릿에 값을 전달하기 등)
 
 
 
-### 1. 시작하기
 
-#### 1. 환경설정
 
- `c9 환경설정` 을 따라 한후
+## 1. 시작하기
+
+#### 1.1 환경설정
+
+ `c9 환경설정.md` 을 따라 한후
 
 ```bash
 $ pyenv virtualenv django-venv
@@ -58,7 +70,7 @@ workspacename/
 
 
 
-#### 2. 서버 실행하기
+#### 1.2 서버 실행하기
 
 `settings.py`에서 ALLOWED_HOST의 내용을 ['*']로 바꿔준다.	
 
@@ -85,71 +97,65 @@ $ python manage.py runserver 0.0.0.0:8080
 
 ![1-3](8. Picture\1-3.PNG)
 
-#### 3. 추가설정
+#### 1.3 추가설정
 
-필요없는 파일 git에 올리지 않게 설정
+> 필요없는 파일을 git에 올리지 않게 하기 위함
 
-[gitignore](https://www.gitignore.io/)에서 django검색 후 모두 복사
+[gitignore](https://www.gitignore.io/) 페이지에서 django검색 후 내용 모두 복사
 
-```
-https://www.gitignore.io/api/django
-```
+git init을 해줘 git 저장소로 만든다.
 
 ```bash
 $ git init
 ```
 
+gitignore을 실행시키기 위한 파일을 생성한다.
+
 ```bash
 $ vi .gitignore
 ```
 
-후 내용 복사
+내용을 붙여넣고 저장하면 된다.
 
 
 
-### 2. Hello, Django
 
-> Django 프로젝트는 여러가지 app의 집합이다.
->
-> 각각의 app은 MTV 패턴으로 구성되어 있다.
->
-> M (Model) : 어플리케이션의 핵심 로직의 동작을 수행한다.
->
-> T (Template) : 사용자에게 결과물을 보여준다.
->
-> V (View) : 모델과 템플릿의 동작을 제어한다. (모델의 상태를 변경하거나 값을 가져오고, 템플릿에 값을 전달하기 등)
->
-> **일반적으로 MVC패턴으로 더 많이 사용된다.**
 
-#### 1. 기본 로직
+## 2. Django
 
-앞으로 우리는 1. 요청 url 설정(`urls.py`) 2. 처리 할 view 설정(`view.py`) 3. 결과 보여줄 template 설정(`templates/`)으로 작성할 것이다.
+#### 2.1 기본 로직
 
-##### 1-1. setting.py 설정
+앞으로 우리는 
 
-base_dir 프로젝트 dir 설명
+1. 요청 url 설정(`urls.py`) 
+2. 처리 할 view 설정(`view.py`) 
+3. 결과 보여줄 template 설정(`templates/`)으로 작성할 것이다.
 
-debug = true는 디버그
+##### 2.1.1 setting.py 설정
 
-allowed_host는 호스트 설정
+`base_dir` : 프로젝트 dir 설명
 
-INSTALLED_APPS는 많이 보게 될 것.(마지막에도 ,를 쓴다는 것을 기억해두자-트레일링이라고 함(이어서 쓴다는 의미?))
+`debug = true` : 디버그
 
-TEMPLATES - 장고가 구동하기 위해 필요한 설정들을 만들어 줌
+`allowed_host` : 호스트 설정
 
-DATABASES - DB설정
+`INSTALLED_APPS` : app을 등록하기 위해 많이 보게 될 설정.(마지막에도 ,를 쓴다는 것을 기억해두자-트레일링이라고 함(이어서 쓴다는 의미?))
 
-MIDDLEWARE - 서버와 요청 사이의 무언가
+`TEMPLATES` : 장고가 구동하기 위해 필요한 설정들을 만들어 줌
 
-LANGUAGE_CODE = 'ko-kr'로 설정해주자
+`DATABASES` : DB설정
 
-TIME_ZONE = 'Asia/Seoul'
+`MIDDLEWARE` : 서버와 요청 사이의 무언가
 
-##### 1-2. urls.py
+`LANGUAGE_CODE` : 'ko-kr'로 설정해주자
+
+`TIME_ZONE` : 'Asia/Seoul'
+
+##### 2.1.2 urls.py
 
 flask에서 @app.route로 했던 내용들이 이제 이곳에 들어간다.
 
-view.py를 urls.py에 등록한다.
+`view.py`를 `urls.py`에 등록한다.
 
 ```python
 from home import views
@@ -161,7 +167,7 @@ urlpatterns = [
 
 위의 코드를 한 세트라고 생각하자.
 
-##### 1-3. app 시작하기
+##### 2.1.3 app 시작하기
 
 ```bash
 $ python manage.py startapp home
@@ -175,9 +181,7 @@ $ python manage.py makemigrations
 $ python manage.py migrate
 ```
 
-...............................................................................................................
-
-##### 1-4. view.py
+##### 2.1.4 view.py
 
 ```python
 # home/views.py
@@ -190,10 +194,10 @@ def index(request):
 
 주의할 점은 선언된 함수에서 `request`를 인자로 받아야 한다.
 
-- request는 사용자(클라이언트)의
+- `request`는 사용자(클라이언트)의
 - Django 내부에서 해당 함수를 호출하면서 정보를 넘겨주기 때문에 반드시 명시해줘야 한다.
 
-##### 1-5. Template(MTV-V)
+##### 2.1.5 Template(MTV-V)
 
 > Django에서 활용되는 Template은 DTL(Django Template Language)이다.
 >
@@ -238,23 +242,25 @@ def index(request):
 
 
 
-### 3. Variable Routing
 
-##### 1. url 설정
+
+## 3. Variable Routing
+
+#### 3.1 url 설정
 
 ```python
 path('home/you/<name>', views.you),
 path('home/cube/<int:num>', vies.cube),
 ```
 
-##### 2. view 파일 설정
+#### 3.2 view 파일 설정
 
 ```python
 def you(request, name):
     return render(request, 'you.html', {'name': name})
 ```
 
-##### 3. 템플릿 파일 설정
+#### 3.3 템플릿 파일 설정
 
 ```django
 <h1> {{ name }}, 안녕!! </h1>
@@ -262,24 +268,26 @@ def you(request, name):
 
 
 
-### 4. Form data
 
-##### 1. ping.html
 
-###### 1.1 요청 url 설정
+## 4. Form data
+
+#### 4.1 ping.html
+
+##### 4.1.1 요청 url 설정
 
 ```python
 path('home/ping/', views.ping)
 ```
 
-###### 1.2 view 설정
+##### 4.1.2 view 설정
 
 ```python
 def ping(request):
     return render(request, 'ping.html')
 ```
 
-###### 1.3 template 설정
+##### 4.1.3 template 설정
 
 ```django
 <form action='/home/pong/'>
@@ -289,15 +297,15 @@ def ping(request):
 </form>
 ```
 
-##### 2. pong.html
+#### 4.2 pong.html
 
-###### 2.1 요청 url 설정
+##### 4.2.1 요청 url 설정
 
 ```python
 path('home/pong/', views.pong)
 ```
 
-###### 2.2 view 설정
+##### 4.2.2 view 설정
 
 ```python
 def pong(request):
@@ -305,15 +313,15 @@ def pong(request):
     return render(request, 'pong.html', {'message': message})
 ```
 
-###### 2.3 template 설정
+##### 4.2.3 template 설정
 
 ```html
 <h1>{{ message }}</h1>
 ```
 
-##### 3. POST 요청 처리
+#### 4.3 POST 요청 처리
 
-###### 3.1 요청 FORM 수정
+##### 4.3.1 요청 FORM 수정
 
 ```django
 <form action="/home/pong/" method="POST">
@@ -321,7 +329,7 @@ def pong(request):
 </form>
 ```
 
-###### 3.2 view 수정
+##### 4.3.2 view 수정
 
 ```python
 def pong(request):
@@ -335,11 +343,13 @@ def pong(request):
 
 
 
-### 5. Static file 관리
+
+
+## 5. 2개 이상의 App 사용
+
+### 5.1 Static file 관리
 
 > 정적 파일(images, css, js)을 서버 저장이 되어 있을 때, 이를 각각의 템플릿에 불러오는 방법
-
-#### 디렉토리 구조
 
 디렉토리 구조는 `home/static/home/` 으로 구성된다.
 
@@ -357,7 +367,7 @@ def pong(request):
    {% extends 'base.html' %}
    {% load static %}
    {% block css %}
-   <link rel="stylesheets" tyle="text/css" href="{% static 'home/stylesheets/style.css'%}">
+   <link rel="stylesheets" style="text/css" href="{% static 'home/stylesheets/style.css'%}">
    {% endblock %}
    {% block body %}
    <img src="{% static 'home/images/1.jpg' %}">
@@ -366,9 +376,7 @@ def pong(request):
 
    
 
-
-
-### 6. URL 설정 분리
+### 5.2 URL 설정 분리
 
 > 위와 같이 코드를 짜는 경우에, `django_intro/urls.py` 에 모든 url 정보가 담기게 된다.
 >
@@ -401,9 +409,11 @@ def pong(request):
 
    - `home/views.py` 파일에서 `index`를 호출하는 url은 `http://<host>/` 가 아니라 `http://<host>/home/`이다.
 
-### 7. Template 폴더 설정
+3. Template 폴더 설정
 
-##### 디렉토리 구조
+   
+
+### 5.3 디렉토리 구조
 
 디렉토리 구조는 `home/templates/home/` 으로 구성된다.
 
@@ -471,3 +481,157 @@ TEMPLATES = [
    ```
 
    
+
+## Admin 설정
+
+> admin설정은 migrations이전에 해줘야 적용이 된다.
+>
+> migrations를 이미 해줬다면 삭제하고 해야한다.
+
+
+
+아래 명령어 입력해서 아이디 생성
+
+```bash
+$ python manage.py createsuperuser
+```
+
+![django_1](image\django_1.PNG)
+
+`admin.py`에 `models.py`에 있는 모델을 등록해준다.
+
+```python
+from django.contrib import admin
+from .models import Board
+
+# Register your models here.
+admin.site.register(Board)
+```
+
+![django_2](image\django_2.PNG)
+
+`models.py`에서 `__str__`함수 오버라이딩을 통해 개체들의 표시형식을 바꿔줄 수 있다.
+
+```python
+from django.db import models
+
+# Create your models here.
+class Board(models.Model):
+    title = models.CharField(max_length=20)
+    content = models.TextField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+        return f'{self.title}: {self.content}'
+```
+
+추가로 Admin 페이지 자체의 형태를 바꾸고 싶다면 `admin.py`에서 아래와 같이 바꿔주어야 한다.
+
+안녕하세요. 진로를 정하는데에 고민이 되어 질문드립니다.
+
+살면서 다양한 경험을 해보고 싶어서 한국에서 커리어를 어느정도 쌓고 해외를 옮겨 다니면서 커리어를 쌓고 싶다는 생각이 들어 어떤 분야가 해외 진출?에 유리한지 알고 싶습니다.
+
+또 혹시 해외를 옮겨다니면서 커리어를 쌓을 경우 안좋은 점이 있는지도 알고 싶습니다.
+
+```python
+from django.contrib import admin
+# admin.py에서 Board 클래스를 쓰려면 반드시 import 해야함!
+# 명시적 상대
+from .models import Board
+# Register your models here.
+class BoardAdmin(admin.ModelAdmin):
+    list_display = ['title', 'content', 'created_at', 'updated_at',]
+    
+admin.site.register(Board, BoardAdmin)
+```
+
+
+
+## Restful API
+
+> RestAPI
+>
+> URL + URN = URI
+
+`path`에 `name`변수를 활용하기
+
+```python
+urlpatterns = [
+    path('', views.index, name='index'),
+]
+```
+
+변수를 바꿔준 뒤에는 주소를 입력할 때 다른 방식으로 입력해야 한다.
+
+```html
+<a href="{% url 'student:new' %}">생성하기</a>
+```
+
+
+
+app_name 설정?
+
+---
+
+urls 확인-> python manage.py show_urls
+
+django_extensions를 INSTALLED_APPS에 등록했어야함
+
+---
+
+
+
+고치기
+
+```html
+<form action='{% url "boards:edit" board.pk %}' method="POST">
+```
+
+```html
+<form method="POST">
+```
+
+로 바꿔도 자기 자신으로 보내기 때문에 가능함
+
+
+
+
+
+## How to Change your django Project name
+
+It's possible to rename a project in django. you just have to replace your existing project name in the following places with the new one.
+
+Your django project structure
+
+```
+ProjectName/
+         manage.py 
+         ProjectName/ 
+                 __init__.py 
+                 settings.py 
+                 urls.py 
+                 wsgi.py
+```
+
+Rename your **project directory** (ProjectName) and the following inside your project directory.
+**settings.py**
+
+*ROOT_URLCONF = 'NewProjectName.urls'*
+*WSGI_APPLICATION = 'NewProjectName.wsgi.application'*
+
+**wsgi.py**
+
+*os.environ.setdefault("DJANGO_SETTINGS_MODULE", "NewProjectName.settings")*
+
+**manage.py**
+
+*os.environ.setdefault("DJANGO_SETTINGS_MODULE", "NewProjectName.settings")*
+
+
+
+
+
+## 기타
+
+ALLOWED_HOST에 *대신에 8080전까지 주소를 입력해 줘도 된다.

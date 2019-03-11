@@ -204,6 +204,3 @@ class Board(models.Model):
       Board.objects.filter(title__endswith='글') # 제목이 글로 끝나는 모든 데이터
       ```
 
-- 관리자
-  - python manage.py createsuperuser
-  - ...뭐더라
