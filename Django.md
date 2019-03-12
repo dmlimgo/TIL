@@ -1,6 +1,8 @@
 # Django
 
 > 19.02.11 내용
+>
+> 19.03.11 REST API 추가
 
 [TOC]
 
@@ -266,6 +268,12 @@ def you(request, name):
 <h1> {{ name }}, 안녕!! </h1>
 ```
 
+날짜( type="date" )의 경우에는 필터를 통해 형식을 맞춰 주어야 한다.
+
+```html
+birthday: <input type="date" name="birthday" value="{{ student.birthday|date:'Y-m-d'}}">
+```
+
 
 
 
@@ -347,7 +355,7 @@ def pong(request):
 
 ## 5. 2개 이상의 App 사용
 
-### 5.1 Static file 관리
+#### 5.1 Static file 관리
 
 > 정적 파일(images, css, js)을 서버 저장이 되어 있을 때, 이를 각각의 템플릿에 불러오는 방법
 
@@ -376,7 +384,7 @@ def pong(request):
 
    
 
-### 5.2 URL 설정 분리
+#### 5.2 URL 설정 분리
 
 > 위와 같이 코드를 짜는 경우에, `django_intro/urls.py` 에 모든 url 정보가 담기게 된다.
 >
@@ -413,7 +421,7 @@ def pong(request):
 
    
 
-### 5.3 디렉토리 구조
+#### 5.3 디렉토리 구조
 
 디렉토리 구조는 `home/templates/home/` 으로 구성된다.
 
@@ -480,15 +488,16 @@ TEMPLATES = [
    └── views.py
    ```
 
-   
 
-## Admin 설정
+
+
+
+
+## 6. Admin 설정
 
 > admin설정은 migrations이전에 해줘야 적용이 된다.
 >
 > migrations를 이미 해줬다면 삭제하고 해야한다.
-
-
 
 아래 명령어 입력해서 아이디 생성
 
@@ -528,12 +537,6 @@ class Board(models.Model):
 
 추가로 Admin 페이지 자체의 형태를 바꾸고 싶다면 `admin.py`에서 아래와 같이 바꿔주어야 한다.
 
-안녕하세요. 진로를 정하는데에 고민이 되어 질문드립니다.
-
-살면서 다양한 경험을 해보고 싶어서 한국에서 커리어를 어느정도 쌓고 해외를 옮겨 다니면서 커리어를 쌓고 싶다는 생각이 들어 어떤 분야가 해외 진출?에 유리한지 알고 싶습니다.
-
-또 혹시 해외를 옮겨다니면서 커리어를 쌓을 경우 안좋은 점이 있는지도 알고 싶습니다.
-
 ```python
 from django.contrib import admin
 # admin.py에서 Board 클래스를 쓰려면 반드시 import 해야함!
@@ -548,41 +551,41 @@ admin.site.register(Board, BoardAdmin)
 
 
 
-## Restful API
+
+
+## 7. Restful API
 
 > RestAPI
 >
 > URL + URN = URI
+>
+> [REST API에 대한 설명](https://meetup.toast.com/posts/92)
 
-`path`에 `name`변수를 활용하기
+#### 7.1 기본 설정
+
+`path`에 `name`변수를 써준다.
+
+`app_name`을 설정하여 서로 다른 app에서도 사용 가능하도록 한다.
 
 ```python
+# urls.py
+app_name = 'student'
+
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', views.index, name="index"),
 ]
 ```
 
 변수를 바꿔준 뒤에는 주소를 입력할 때 다른 방식으로 입력해야 한다.
 
 ```html
+# html
 <a href="{% url 'student:new' %}">생성하기</a>
 ```
 
+#### 7.2 Variable Routing
 
-
-app_name 설정?
-
----
-
-urls 확인-> python manage.py show_urls
-
-django_extensions를 INSTALLED_APPS에 등록했어야함
-
----
-
-
-
-고치기
+원래는 아래와 같이 변수를 넘겨줘야 했지만
 
 ```html
 <form action='{% url "boards:edit" board.pk %}' method="POST">
@@ -592,7 +595,17 @@ django_extensions를 INSTALLED_APPS에 등록했어야함
 <form method="POST">
 ```
 
-로 바꿔도 자기 자신으로 보내기 때문에 가능함
+로 바꿔도 action이 없다면 자기 자신으로 보내기 때문에 가능함.
+
+
+
+#### 7.9 추가
+
+django_extensions를 pip를 통해 설치하고 INSTALLED_APPS에 등록했다면 다음 명령어를 통해 url을 확인할 수 있다.
+
+```bash
+$ python manage.py show_urls
+```
 
 
 
