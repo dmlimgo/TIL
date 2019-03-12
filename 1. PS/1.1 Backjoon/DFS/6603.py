@@ -1,33 +1,25 @@
-def backtrack(a, k, input):
-    global MAXCANDIDATES
-    c = [0] * MAXCANDIDATES
-
-    if k == input:
-        for i in range(1, k+1):
-            print(a[i], end=" ")
+def dfs(d):
+    global visit, k
+    if d == 6:
+        for i in range(6):
+            print(result[i], end=' ')
         print()
     else:
-        k += 1
-        ncandidates = construct_candidates(a, k, input, c)
-        for i in range(ncandidates):
-            a[k] = c[i]
-            backtrack(a, k, input)
+        for i in range(k):
+            if not visit[i] and result[d-1] < S[i]:
+                visit[i] = 1
+                result[d] = S[i]
+                dfs(d+1)
+                visit[i] = 0
 
-def construct_candidates(a, k, input, c):
-    in_perm = [0] * NMAX
 
-    for i in range(1, k):
-        in_perm[a[i]] = 1
-
-    ncandidates = 0
-    for i in range(1, input+1):
-        if in_perm[i] == 0:
-            c[ncandidates] = i
-            ncandidates += 1
-    return ncandidates
-
-MAXCANDIDATES = 100
-NMAX = 100
-data = [0, 1, 2, 3, 4, 5]
-a = [0] * NMAX
-backtrack(a, 0, 5)
+while True:
+    nums = list(map(int, input().split()))
+    if len(nums) == 1:
+        break
+    k = nums[0]
+    S = nums[1:]
+    visit = [0] * k
+    result = [0] * 7
+    dfs(0)
+    print()
