@@ -2,13 +2,9 @@
 
 [TOC]
 
+> 분산형 버전 관리 시스템, 코드의 history를 관리하는 도구
 
-
-분산형 버전 관리 시스템, 코드의 history를 관리하는 도구
-
-![git_flow](C:\Users\student\Desktop\TIL\picture\git_flow.PNG)
-
-![git_flow](C:\Users\Lim\Desktop\SSAFY\TIL\picture\git_flow.PNG)
+![git_flow](8. Picture\git_flow.PNG)
 
 
 
