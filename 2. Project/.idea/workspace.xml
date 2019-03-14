@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="64656baa-209d-4280-8485-67cb38b91918" name="Default Changelist" comment="" />
+    <list default="true" id="64656baa-209d-4280-8485-67cb38b91918" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../1. PS/1.2 SW Expert Academy/D3/.idea/D3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../1. PS/1.2 SW Expert Academy/D3/.idea/D3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. PS/1.2 SW Expert Academy/D3/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../1. PS/1.2 SW Expert Academy/D3/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. PS/1.2 SW Expert Academy/D3/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../1. PS/1.2 SW Expert Academy/D3/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. PS/1.2 SW Expert Academy/D3/1493.py" beforeDir="false" afterPath="$PROJECT_DIR$/../1. PS/1.2 SW Expert Academy/D3/1493.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../1. PS/1.2 SW Expert Academy/D3/1493.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../1. PS/1.2 SW Expert Academy/D3/1493.txt" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,8 +62,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="679" />
-    <option name="y" value="14" />
+    <option name="x" value="875" />
+    <option name="y" value="11" />
     <option name="width" value="1002" />
     <option name="height" value="1047" />
   </component>
@@ -157,7 +163,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="679" y="14" width="1002" height="1047" extended-state="0" />
+    <frame x="875" y="11" width="1002" height="1047" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18257262" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -194,6 +200,7 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../../Lecture_matrials/2. Python Web/11_190115_CSS/00_css.html" />
     <entry file="file://$PROJECT_DIR$/lunch_list.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1349">
@@ -207,9 +214,6 @@
           <caret line="3" selection-start-line="3" selection-end-line="10" selection-end-column="48" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../../Lecture_matrials/2. Python Web/11_190115_CSS/00_css.html">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tongye.py">
       <provider selected="true" editor-type-id="text-editor">

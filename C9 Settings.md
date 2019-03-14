@@ -1,10 +1,14 @@
-# C9 환경설정
+# C9 Settings
 
 > 19.01.28. 실습, c9에 실습 파일 있음.
 >
->  `zzu.li/c9`를 참조한 내용임.
+> `zzu.li/c9`를 참조한 내용임.
+
+Cloud9에서 웹 프로그래밍을 하기 위해서는 몇가지 환경을 설정해주어야 한다.
 
 ### 1. pyenv 설정
+
+명령어를 입력하기 전에 명령어의 의미를 살펴보자.
 
 - `pyenv` : 하나의 컴퓨터 내에서 여러가지 버전의 python을 사용할 수 있도록 버전관리를 도와준다.
 
@@ -12,9 +16,11 @@
 
 - `pyenv local `: 해당 디렉토리 파이썬 버전 설정
 
-> 먼저 `c9.io/login` 페이지 접속 - `workspace` 생성 (`blank`로 생성해야 함)
+먼저 `c9.io/login` 페이지 접속 - `workspace` 생성 (`blank`로 생성해야 함)
 
-> 아래 명령어 복사(알아서 진행 됨)
+아래 명령어를 통채로 복사해서 붙여넣으면 알아서 진행이 된다.
+
+마지막에 엔터를 눌러 마지막 명령어를 실행시켜주는 것을 잊지 말자.
 
 ```powershell
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
@@ -29,8 +35,8 @@ python -V
 pip install --upgrade pip
 ```
 
-* echo 'export' : pyenv path 설정
-* echo -e : path 설정 불러오는거?
+* `echo 'export'` : pyenv path 설정
+* `echo -e` : path 설정 불러오는거?
 
 완료 후 아래 명령어 복사
 

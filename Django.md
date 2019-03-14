@@ -28,14 +28,14 @@
 
 #### 1.1 환경설정
 
- `c9 환경설정.md` 을 따라 한후
+ `C9 Settings.md` 을 따라 한후
 
 ```bash
-$ pyenv virtualenv django-venv
+pyenv virtualenv django-venv
 ```
 
 ```bash
-$ pyenv local django-venv
+pyenv local django-venv
 ```
 
 ![1-1](.\8. Picture\1-1.PNG)
@@ -43,13 +43,13 @@ $ pyenv local django-venv
 완료 후 아래 명령어 입력
 
 ```bash
-$ pip install django
+pip install django
 ```
 
 아래의 명령어를 입력하면 django_intro 폴더가 생성된다.
 
 ```bash
-$ django-admin startproject django_intro
+django-admin startproject django_intro
 ```
 
 > `startproject`를 할때만 `django-admin`이라는 이름으로 `django_intro`폴더를 생성한다.
