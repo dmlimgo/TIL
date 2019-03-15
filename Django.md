@@ -495,9 +495,8 @@ TEMPLATES = [
 
 ## 6. Admin 설정
 
-> admin설정은 migrations이전에 해줘야 적용이 된다.
+> migrations를 한 후에 해줘야 한다. 해주지 않으면 생성되지 않는다.
 >
-> migrations를 이미 해줬다면 삭제하고 해야한다.
 
 아래 명령어 입력해서 아이디 생성
 
