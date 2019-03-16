@@ -2,7 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dd32d50-0cb4-4fe1-bb49-26a8ce3e077f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/상일이문제.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/13460.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/13460.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/14502.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/14502_연구소.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/16234.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/16234.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/16637.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/16926.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/16926.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/p.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../상일이문제/practice.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,31 +29,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/16637.py">
+        <entry file="file://$PROJECT_DIR$/16234.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/14502_연구소.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-              <folding>
-                <element signature="e#8#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="411">
+              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/16234.py">
+        <entry file="file://$PROJECT_DIR$/14503.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+            <state relative-caret-position="513">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/14503.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -62,7 +75,11 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/practice.py">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="19">
+              <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -116,18 +133,20 @@
         <option value="$PROJECT_DIR$/16926.py" />
         <option value="$PROJECT_DIR$/13460.txt" />
         <option value="$PROJECT_DIR$/13460.py" />
-        <option value="$PROJECT_DIR$/practice.py" />
         <option value="$PROJECT_DIR$/14502.txt" />
         <option value="$PROJECT_DIR$/14502_연구소.py" />
         <option value="$PROJECT_DIR$/14889.py" />
         <option value="$PROJECT_DIR$/16234.txt" />
         <option value="$PROJECT_DIR$/16234.py" />
+        <option value="$PROJECT_DIR$/practice.py" />
+        <option value="$PROJECT_DIR$/14503.txt" />
+        <option value="$PROJECT_DIR$/14503.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1049" />
-    <option name="width" value="878" />
+    <option name="x" value="1161" />
+    <option name="width" value="766" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -140,8 +159,8 @@
         <subPane>
           <expand>
             <path>
-              <item name="상일이문제" type="b2602c69:ProjectViewProjectNode" />
-              <item name="상일이문제" type="462c0819:PsiDirectoryNode" />
+              <item name="삼성기출" type="b2602c69:ProjectViewProjectNode" />
+              <item name="삼성기출" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -166,7 +185,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.16234">
+  <component name="RunManager" selected="Python.14503">
     <configuration name="13460" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="상일이문제" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -209,6 +228,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="14503" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="상일이문제" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/14503.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="16234" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="상일이문제" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -222,27 +262,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/16234.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="16926" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="상일이문제" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/16926.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -274,18 +293,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.practice" />
-      <item itemvalue="Python.16926" />
       <item itemvalue="Python.13460" />
       <item itemvalue="Python.14502_연구소" />
       <item itemvalue="Python.16234" />
+      <item itemvalue="Python.14503" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.14503" />
+        <item itemvalue="Python.practice" />
         <item itemvalue="Python.16234" />
         <item itemvalue="Python.14502_연구소" />
         <item itemvalue="Python.13460" />
-        <item itemvalue="Python.16926" />
-        <item itemvalue="Python.practice" />
       </list>
     </recent_temporary>
   </component>
@@ -303,14 +322,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1049" y="0" width="878" height="1047" extended-state="0" />
+    <frame x="1161" y="0" width="766" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14642857" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16895604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26615554" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26615554" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -353,8 +373,25 @@
     <entry file="file://$PROJECT_DIR$/13460.py" />
     <entry file="file://$PROJECT_DIR$/16637.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
+        <state relative-caret-position="304">
           <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/14502_연구소.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+          <folding>
+            <element signature="e#8#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/16234.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -364,9 +401,6 @@
           <caret column="3" selection-start-column="3" selection-end-column="3" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/16926.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -396,27 +430,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/14502_연구소.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
-          <folding>
-            <element signature="e#8#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/16234.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="9" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/16234.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="411">
           <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="13" selection-start-line="1" selection-start-column="13" selection-end-line="1" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/14503.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/14503.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
         </state>
       </provider>
     </entry>
