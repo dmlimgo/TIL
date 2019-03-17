@@ -2,23 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dd32d50-0cb4-4fe1-bb49-26a8ce3e077f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/.idea/상일이문제.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/13460.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/13460.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/14502.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/14502_연구소.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/16234.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/16234.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/16637.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/16926.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/16926.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/p.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../상일이문제/practice.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/14503.py" beforeDir="false" afterPath="$PROJECT_DIR$/14503.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,8 +25,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/14503.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="266">
+              <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -145,7 +130,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1161" />
+    <option name="x" value="829" />
     <option name="width" value="766" />
     <option name="height" value="1047" />
   </component>
@@ -322,15 +307,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1161" y="0" width="766" height="1047" extended-state="0" />
-    <editor active="true" />
+    <frame x="829" y="0" width="766" height="1047" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16895604" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26615554" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.26615554" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -453,8 +437,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/14503.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="266">
+          <caret line="14" column="20" lean-forward="true" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
         </state>
       </provider>
     </entry>

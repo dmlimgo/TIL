@@ -1,7 +1,7 @@
 # 11:07
 import sys
 sys.stdin = open('14503.txt')
-
+sys.setrecursionlimit(10000)
 def solve(x, y, d):
     global cnt, f
     if arr[y][x] != 2:
