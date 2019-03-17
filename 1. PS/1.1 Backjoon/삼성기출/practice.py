@@ -1,5 +1,5 @@
-for i in range(4):
-    if i == 1:
-        print(2)
-else:
-    print(3)
+l = list(input())
+for i in range(len(l)):
+    if ord(l[i]) == 1:
+        l[i] = ' '
+print(''.join(map(str,l)))
