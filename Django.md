@@ -3,6 +3,8 @@
 > 19.02.11 내용
 >
 > 19.03.11 REST API 추가
+>
+> 19.03.18 image 받아오기 추가
 
 [TOC]
 
@@ -605,6 +607,31 @@ django_extensions를 pip를 통해 설치하고 INSTALLED_APPS에 등록했다�
 ```bash
 $ python manage.py show_urls
 ```
+
+
+
+## 8. image 받아서 저장하기(model)
+
+[Django Model field](https://docs.djangoproject.com/en/2.1/ref/models/fields/#bigintegerfield)
+
+c9/django_recrud 참조
+
+- static 관리
+- pip install pillow
+- html image file form 검색 참조
+- media files 관리 (settings.py, urls.py)
+
+- 이미지 처리해서 저장하기 pip install pilkit django-imagekit (imagekit은 INSTALLED_APPS에 등록해야함)
+
+- board_image_path 정의
+
+
+
+
+
+## 9. 둘이서
+
+
 
 
 
