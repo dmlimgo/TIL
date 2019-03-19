@@ -125,3 +125,13 @@ $ git commit --amend
 ```
 
 수정 후 exit 엔터
+
+
+
+#### 9. git log
+
+```bash
+$ git log
+```
+
+후 :를 이용해서 빠져나오기

@@ -633,6 +633,17 @@ c9/django_recrud 참조
 
 
 
+## 10. Django_fbv
+
+검증작업. 
+
+1. forms.py 생성
+2. views.py 에 선언
+3. get_object_or_404 함수
+4. models.py url 오버라이딩
+5. modelform
+6. crispy-forms app사용 (pip install django-crispy-forms)
+
 
 
 
