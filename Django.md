@@ -359,7 +359,9 @@ def pong(request):
 
 #### 5.1 Static file 관리
 
-> 정적 파일(images, css, js)을 서버 저장이 되어 있을 때, 이를 각각의 템플릿에 불러오는 방법
+> 정적 파일(images, css, js)을 서버 저장이 되어 있을 때, 이를 각각의 템플릿에 불러오는 방법 
+>
+> 내가 만든 파일(home,css)이나 외부에서 가져온 파일(bootstrap.min.css)을 사용할 때 쓴다.
 
 디렉토리 구조는 `home/static/home/` 으로 구성된다.
 
@@ -635,13 +637,200 @@ c9/django_recrud 참조
 
 ## 10. Django_fbv
 
-검증작업. 
+> Function-Based View
+>
+> 검증작업. 
 
-1. forms.py 생성
-2. views.py 에 선언
-3. get_object_or_404 함수
+#### 1. forms.py 생성
+
+forms.Form을 사용한 방법. Column들을 일일이 설정해줘야 한다.
+
+```python
+from django import forms
+from .models import Board
+   
+class BoardForm(forms.Form):
+	title = forms.CharField(label='제목', max_length=10,
+                            error_messages= {'required': '제목을 반드시 입력해주세요.'})
+    content = forms.CharField(label='내용',
+                            error_messages= {'required': '내용을 반드시 입력해주세요.'},
+                            widget=forms.Textarea(attrs={
+                                       'placeholder': '내용을 입력하세요',
+                                       'class': 'input-box'
+                                       })
+                            )
+```
+
+forms.ModelForm을 사용한 방법. Meta 클래스를 이용해 편리하게 Column들을 설정해 줄 수 있다.
+
+widgets나 error_messages를 이용해 세부설정을 해 줄 수 있다.
+
+   ```python
+from django import forms
+from .models import Board
+   
+# modelform
+class BoardForm(forms.ModelForm):
+	class Meta:
+    	model = Board
+        # fields = ['title', 'content']
+        fields = '__all__'
+        widgets = {'title': forms.TextInput(attrs={
+                                            'placeholder': '제목을 입력해주세요.',
+                                            'class': 'title'}),
+                   'content': forms.Textarea(attrs={
+                                            'placeholder': '내용을 입력해주세요.',
+                                            'class': 'content'})
+                   }
+        error_messages = {'title': {
+                                    'required': '제목을 반드시 입력해주세요.'
+                                    },
+                          'content': {
+                                    'required': '내용을 반드시 입력해주세요.'
+                               		}
+                          }
+   ```
+
+crispy를 이용해 method나 submit등을 편하게 설정해 줄 수 있다.
+
+   ```python
+from django import forms
+from .models import Board
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Submit
+   
+# modelform
+class BoardForm(forms.ModelForm):
+    class Meta:
+        model = Board
+        # fields = ['title', 'content']
+        fields = '__all__'
+        widgets = {'title': forms.TextInput(attrs={
+                                               'placeholder': '제목을 입력해주세요.',
+                                               'class': 'title'}),
+                   'content': forms.Textarea(attrs={
+                                               'placeholder': '내용을 입력해주세요.',
+                                               'class': 'content'})
+                   }
+        error_messages = {'title': {
+                                       'required': '제목을 반드시 입력해주세요.'
+                                       },
+                          'content': {
+                                       'required': '내용을 반드시 입력해주세요.'
+                              		   }
+                         }
+           
+        # crispy 한정
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.helper = FormHelper()
+            self.helper.form_method = 'POST'
+            self.helper.add_input(Submit('Submit', 'submit'))
+   ```
+
+
+
+#### 2. views.py 에 선언 
+
+```python
+from .forms import MovieForm
+
+def create(request):
+    if request.method == 'POST':
+        movie_form = MovieForm(request.POST)
+        if movie_form.is_valid():
+            movie = movie_form.save()
+            # 밑에 처럼 써주기 위해서는 models.py에 get_absolute_url을 설정해줘야 한다.
+            return redirect(movie)
+    else:
+        movie_form = MovieForm()
+    context = {'movie_form': movie_form}
+    return render(request, 'movies/form.html', context)
+```
+
+
+
+#### 2.1 models.py 설정
+
+redirect(movie)를 사용하기 위해 get_absolute_url을 설정해줘야 함.
+
+```python
+from django.urls import reverse
+
+class Movie(models.Model):
+    title = models.CharField(max_length=50)
+    audience = models.IntegerField()
+    poster_url = models.TextField()
+    description = models.TextField()
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
+    
+    def __str__(self):
+        return f'{self.id}: {self.title}'
+        
+    def get_absolute_url(self):
+        return reverse('movies:detail', args=[self.pk])
+```
+
+
+
+#### 3. forms.html 에 선언
+
+```python
+{% extends 'base.html' %}
+{% block body %}
+<form method="POST">
+    {% csrf_token %}
+    {{ movie_form }}
+    <input type="submit">
+</form>
+{% endblock %}
+```
+
+
+
+#### 4. get_object_or_404 함수
+
+오브젝트를 가져와서 있으면 요청대로 처리하고 없으면 404에러를 반환하는 함수.
+
+```python
+def update(request, board_pk):
+    # 1. board_pk에 대항하는 오브젝트를 가져온다.
+    #    - 없으면 404 에러.
+    #    - 있으면 board = Board.objects.get(pk=board_pk) 와 동일.
+    board = get_object_or_404(Board, pk=board_pk)
+    # 2-1. POST 요청이면 (사용자 form을 통해 데이터를 보내 준 것.)
+    if request.method == 'POST':
+        # 사용자 입력값(request.POST)을 BoardForm에 전달해주고,
+        board_form = BoardForm(request.POST, instance=board)
+        # 검증 (유효성 체크)
+        if board_form.is_valid():
+            # board.title = board_form.cleaned_data.get('title')
+            # board.content = board_form.cleaned_data.get('content')
+            # board.save()
+            board = board_form.save()
+            return redirect(board)
+    # 2-2. GET 요청이면 (수정하기 버튼을 눌렀을 때)
+    else:
+        # BoardForm을 초기화(사용자 입력값을 넣어준 상태)
+        # board_form = BoardForm(initial=board.__dict__)
+        board_form = BoardForm(instance=board)
+    # context에 담겨있는 board_form은 두가지 상황이 있다.
+    # 1 - POST 요청에서 검증에 실패하였을 때, 오류 메세지가 포함된 상태
+    # 2 - GET 요청에서 초기화된 상태
+    context = {'board_form': board_form}
+    return render(request, 'boards/form.html', context)
+    # update.html을 만들 필요가 없다.
+
+```
+
+
+
+
+
 4. models.py url 오버라이딩
+
 5. modelform
+
 6. crispy-forms app사용 (pip install django-crispy-forms)
 
 
