@@ -76,3 +76,19 @@ alias python='winpty python.exe'
 `winpty` Windows software package providing an interface similar to a Unix pty-master for communication with Windows console programs.
 
 이후 python을 입력해 실행가능.
+
+
+
+#### 3. 터미널 이름이 이상하게 뜰 때
+
+bash_profile을 지워준다
+
+rm -rf ~/.bash_profile
+
+
+
+#### 4. bashrc 수정하고 나서!
+
+터미널을 껐다 켜준다. 꼭
+
+터미널을 실행하면 bashrc가 실행되면서 환경변수가 설정되기 때문.
