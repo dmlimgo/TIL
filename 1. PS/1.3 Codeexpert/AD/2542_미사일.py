@@ -8,7 +8,15 @@ def shoot(i, F, R):
 
 
 def Rperm(pos, ship):
+    global minval
     if pos == M:
+        cnt = 0
+        for i in ship:
+            if i[2] > 0:
+                cnt += 1
+        if minval > cnt:
+            print(ship)
+            minval = cnt
         return
     for i in range(N):
         if ship[i][2] > 0:
@@ -16,12 +24,14 @@ def Rperm(pos, ship):
             Rperm(pos+1, ship)
             shoot(i, -F, R)
 
-arr = [[0 for _ in range(1000)] for _ in range(1000)]
+# arr = [[0 for _ in range(1000)] for _ in range(1000)]
 N = int(input())
 ship = []
 for i in range(N):
     x, y, e = map(int, input().split())
-    ship.append((x, y, e))
-    arr[y][x] = e
+    ship.append([x, y, e])
+    # arr[y][x] = e
 M, F, R = map(int, input().split())
+minval = 10000001
 Rperm(0, ship)
+print(minval)
