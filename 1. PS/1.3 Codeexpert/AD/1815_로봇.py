@@ -2,8 +2,10 @@ import sys
 sys.stdin = open('1815.txt')
 
 def bfs():
+    dis_cnt = 0
     while q:
         x, y, d = q.pop(0)
+        print(x, y, d, dis_cnt)
         if x == gx and y == gy:
             continue
         for nd in range(1, 5):
@@ -20,6 +22,7 @@ def bfs():
                             memo[newY][newX] = memo[y][x] + 2
                     else:
                         memo[newY][newX] = memo[y][x] + 2
+                    dis_cnt = 1
                     q.append((newX, newY, nd))
             else:
                 if memo[newY][newX] > memo[y][x]:
@@ -30,15 +33,26 @@ def bfs():
                             else:
                                 memo[newY][newX] = memo[y][x]
                         else:
+                            dis_cnt += 1
                             memo[newY][newX] = memo[y][x] + 1
                     else:
-                        if newX == gx and newY == gy:
-                            if nd != gd:
+                        dis_cnt += 1
+                        if dis_cnt > 3 and dis_cnt % 3 == 1:
+                            if newX == gx and newY == gy:
+                                if nd != gd:
+                                    memo[newY][newX] = memo[y][x] + 2
+                                else:
+                                    memo[newY][newX] = memo[y][x] + 1
+                            else:
                                 memo[newY][newX] = memo[y][x] + 1
+                        else:
+                            if newX == gx and newY == gy:
+                                if nd != gd:
+                                    memo[newY][newX] = memo[y][x] + 1
+                                else:
+                                    memo[newY][newX] = memo[y][x]
                             else:
                                 memo[newY][newX] = memo[y][x]
-                        else:
-                            memo[newY][newX] = memo[y][x]
                     q.append((newX, newY, nd))
 
 
