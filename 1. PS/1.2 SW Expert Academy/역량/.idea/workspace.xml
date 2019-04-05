@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3c8a0a41-a5e6-4209-b84e-2e9d788f8f79" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/samsung2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/samsung2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/삼성역량테스트 2번.py" beforeDir="false" afterPath="$PROJECT_DIR$/삼성역량테스트 2번.py" afterDir="false" />
-    </list>
+    <list default="true" id="3c8a0a41-a5e6-4209-b84e-2e9d788f8f79" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,29 +10,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/삼성역량테스트 2번.py">
+        <entry file="file://$PROJECT_DIR$/1949_등산로 조성.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="701">
-              <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+            <state relative-caret-position="323">
+              <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/samsung2.txt">
+        <entry file="file://$PROJECT_DIR$/1949.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="1" column="43" selection-start-line="1" selection-start-column="43" selection-end-line="1" selection-end-column="43" />
+            <state relative-caret-position="399">
+              <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -66,13 +53,14 @@
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/samsung2.txt" />
         <option value="$PROJECT_DIR$/삼성역량테스트 2번.py" />
+        <option value="$PROJECT_DIR$/1949.txt" />
+        <option value="$PROJECT_DIR$/1949_등산로 조성.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="579" />
-    <option name="y" value="88" />
-    <option name="width" value="1064" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="1200" />
+    <option name="width" value="727" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -81,6 +69,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,7 +81,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -115,7 +103,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.삼성역량테스트 2번">
+  <component name="RunManager" selected="Python.1949_등산로 조성">
     <configuration name="삼성역량테스트 2번" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="역량" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -137,7 +125,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="4008_숫자만들기2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="1949_등산로 조성" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="역량" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -149,7 +137,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/4008_숫자만들기2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/1949_등산로 조성.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -223,11 +211,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.1949_등산로 조성" />
         <item itemvalue="Python.삼성역량테스트 2번" />
         <item itemvalue="Python.test" />
         <item itemvalue="Python.4013_특이한 자석" />
         <item itemvalue="Python.practice" />
-        <item itemvalue="Python.4008_숫자만들기2" />
       </list>
     </recent_temporary>
   </component>
@@ -245,14 +233,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1200" y="0" width="727" height="1047" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08324552" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22931786" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.31236443" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31215772" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39978093" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -371,10 +359,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/삼성역량테스트 2번.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="19">
-          <caret line="1" column="12" lean-forward="true" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -385,10 +380,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/삼성역량테스트 2번.py">
+    <entry file="file://$PROJECT_DIR$/1949.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="701">
-          <caret line="67" column="21" selection-start-line="67" selection-start-column="21" selection-end-line="67" selection-end-column="21" />
+        <state relative-caret-position="399">
+          <caret line="21" column="3" lean-forward="true" selection-start-line="21" selection-start-column="2" selection-end-line="21" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/1949_등산로 조성.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
         </state>
       </provider>
     </entry>
