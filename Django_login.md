@@ -143,15 +143,16 @@ True
 
 
 
-### 2. 코드 구성
+### 2. Django.contrib.auth 사용하기
 
 > <https://docs.djangoproject.com/en/2.2/topics/auth/default/>
 
-###### 2.1 settings.py
+###### 2.0 준비하기
 
 왜 이거 쓰더라...
 
 ```python
+# settings.py
 INSTALLED_APPS = [
 	...
     'crispy_forms',
@@ -164,8 +165,17 @@ INSTALLED_APPS = [
 @login_required랑 차이가 뭐더라.
 
 ```python
+# settings.py
 LOGIN_URL = '/boards/'
 ```
+
+
+
+
+
+
+
+###### 2.1 settings.py
 
 ###### 2.2 urls.py
 
@@ -288,6 +298,10 @@ class UserForm(forms.ModelForm):
 
 
 
+지금까지는 context로 정보를 넘겨서 표시했지만
+
+user는 request에서 request.user로 정보를 가져오기 때문에 그냥 써도 된다.
+
 
 
 
@@ -323,3 +337,25 @@ from django.contrib.auth.decorators import login_required
 `settings.py`에 `LOGIN_URL`을 선언해 로그인 후 어디로 갈지 정해줄 수 있다.
 
 login_required는 자동적으로 사용자가 원래 접근했던 페이지 주소를 가지고 로그인 후 바로 연결해주는 기능을 가지고 있다.
+
+
+
+
+
+http 요청을 받을지 말지 처리해주는 데코레이터
+
+@require_http_methods(["GET", "POST"])
+
+
+
+USER DELETE
+
+USER CHANGEFORM
+
+
+
+비밀번호 수정하기
+
+
+
+글쓴이 출력하기 settings.AUTH_USER_MODEL
