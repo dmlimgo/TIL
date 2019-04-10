@@ -359,3 +359,23 @@ USER CHANGEFORM
 
 
 글쓴이 출력하기 settings.AUTH_USER_MODEL
+
+
+
+hashlib.md5('takhee.k@gmail.com'.encode('utf-8')).hexdigest()
+
+
+
+html에서 python코드를 쓸 수 있음
+
+img src="https://s.gravatar.com/avatar/{{ user.email|makehash }}?s=150"
+
+
+
+위의 gravatar 주소 뒤에 &d=mp등으로 기본 아바타를 설정해 줄 수 있다. 주소를 넣을 수 도 있음.
+
+
+
+settings로 가져오는건 스트링
+
+get_user_model은 클래스로 가져옴
