@@ -376,6 +376,46 @@ img src="https://s.gravatar.com/avatar/{{ user.email|makehash }}?s=150"
 
 
 
+save(commit=False)
+
+오브젝트만 만든 상황을 만들기 위함
+
+
+
 settings로 가져오는건 스트링
 
 get_user_model은 클래스로 가져옴
+
+
+
+###### Message
+
+```python
+# settings.py
+session에 저장되는걸 써야 같이 넘어간다.
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+```
+
+```python
+# views.py
+from django.contrib import messages
+...
+def function(request):
+	messages.info(request, f'{user.username}님 가입이 완료되었습니다.')
+```
+
+전역에서 사용하면 편하기 때문에 base.html에 다음 내용을 작성한다.
+
+```html
+# base.html
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {{ message }}
+        </li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+```
+
