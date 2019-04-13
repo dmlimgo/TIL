@@ -1,9 +1,2 @@
-A1 B2 8
-R
-R
-LT
-LT
-L
-T
-T
-T
+B2 A1 1
+LB

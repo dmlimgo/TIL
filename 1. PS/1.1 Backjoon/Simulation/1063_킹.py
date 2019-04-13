@@ -17,13 +17,16 @@ for i in range(N):
     if newX < 1 or newY < 1 or newX > 8 or newY > 8:
         continue
     newSX = newSY = 0
+    moved = 0
     if newX == S[0] and newY == S[1]:
         newSX = S[0] + dx[d]
         newSY = S[1] + dy[d]
-    if (newSX or newSY) and (newSX < 1 or newSY < 1 or newSX > 8 or newSY > 8):
+        moved = 1
+    if moved and (newSX < 1 or newSY < 1 or newSX > 8 or newSY > 8):
         continue
     K[0], K[1] = newX, newY
     if newSX and newSY:
         S[0], S[1] = newSX, newSY
 print('%s%d' % (chr(K[0]+64), K[1]))
 print('%s%d' % (chr(S[0]+64), S[1]))
+# print(i)
