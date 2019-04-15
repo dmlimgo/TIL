@@ -4,15 +4,7 @@
 
 
 
-### 0. 준비사항
-
-###### 0.0 shell_plus
-
-> 꼭 필요한건 아님. 입/출력 확인을 위한 도구.
-
-`shell_plus`를 이용하기 위해 `django_extenstions`이 pip install해야 한다.
-
-`settings.py`의 `INSTALLED_APPS`에 `django_extensions`가 있는지 확인
+### 0. 준비하기
 
 ###### 0.1 HTTP
 
@@ -22,7 +14,9 @@
 >
 > `stateless`: 상태를 저장해 두지 않음. NAVER API를 이용해 크롤링 할 때 NAVER_ID와 SECRET로 계속 요청을 보내줘야 하는 이유.
 
-![django_login_2](C:\Users\student\Desktop\TIL\image\django_login_2.jpg)
+HTTP의 위와 같은 속성을 알고 있어야 Login을 원활하게 할 수 있다.
+
+![django_login_2](image\django_login_2.jpg)
 
 쿠팡 등에서 장바구니에 담으면 `쿠키`(크롬의 경우 자물쇠를 클릭해서 나오는 곳)에 담긴다. HTTP가 상태를 저장하지 않기 때문에 사용자의 브라우저(클라이언트)에 저장하는 것.
 

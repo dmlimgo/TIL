@@ -627,7 +627,215 @@ c9/django_recrud 참조
 
 - board_image_path 정의
 
+#### 8.1 이미지 여러개 올리기
 
+> <https://docs.djangoproject.com/en/2.1/topics/files/>
+
+###### 8.1.1 모델 정의
+
+```python
+class Post(models.Model):
+    ...
+    image = models.ImageField()
+```
+
+###### 8.1.2 pip install pillow
+
+이미지 파일 업로드 pip를 설치해준다.
+
+```bash
+$ pip install pillow
+```
+
+pip 설치 후 pip freeze > requirements.txt 도 해주자.
+
+###### 8.1.3 migration
+
+```bash
+이제 안써도 알지
+```
+
+###### 8.1.4 MEDIA_URL, MEDIA_ROOT 설정
+
+```PYTHON
+# settings.py
+# 앞에 media를 붙이겠다.
+MEDIA_URL = '/media/'
+# media에서 올리는 파일들을 여기서 관리를 하겠다.
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+```
+
+미디어파일로 오는 요청들을 받아서 urls.py에서 처리를 해줘야 하는데 
+
+urlpatterns에 바로 쓰기엔 안예쁘니까 추가해주는 방식으로 써준다.
+
+```python
+# urls.py
+from django.conf import settings
+# url설정의 static을 가져오겠다.
+from django.conf.urls.static import static
+
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+```
+
+여기까지 했으면 파일 업로드를 하기 위한 세팅이 끝났다.
+
+다음은 사용자 처리.
+
+###### 8.1.5 forms.py
+
+```python
+# forms.py
+class PostForm(forms.ModelForm):
+    ...
+    fields = ('content',)
+    ...
+class ImageForm(forms.ModelForm):
+    ...
+    exclude = ('post',)
+    ...
+```
+
+###### 8.1.6 forms.html
+
+에러가 뜬다면 form image upload라고 검색을 해보자 
+
+텍스트나 이런거 말고도 파일을 받을거다라고 명시를 해줘야 한다.
+
+HTML form tag 문서에도 enctype에 대해 명시가 되어 있다.
+
+```html
+enctype="multipart/form-data"
+```
+
+###### 8.1.7 views.py
+
+```python
+from .forms import PostForm, ImageForm
+
+def create(request):
+    if request.method == "POST":
+        post_form = PostForm(request.POST, request.FILES)
+        if post_form.is_valid():
+            post = post_form.save()
+            return redirect('posts:list')
+    else:
+        post_form = PostForm()
+        image_form = ImageForm()
+    context = {'post_form': post_form, 'image_form': image_form}
+    return render(request, 'posts/form.html', context)
+```
+
+###### 8.1.8 create.html
+
+```html
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ post_form|crispy }}
+        {{ image_form|crispy }}
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
+```
+
+그래도 파일이 하나밖에 안올라갈건데
+
+html에서 multiple=True 설정을 해줘야 한다. 하지만 우리는 장고를 쓰므로
+
+```python
+# forms.py
+
+class ImageForm(forms.ModelForm):
+...
+    widgets = {
+                'file': forms.FileInput(attrs={'multiple':True}),
+            }
+...
+```
+
+###### 8.1.9 views.py
+
+> 사진이 전송되는 구조를 보자
+
+request FILES에 1.jpg, 2.jpg... 가 있는데
+
+이 리스트를 .getlist('file')로  files에 저장을 하고-> files= ['1.jpg', '2.jpg', ...]
+
+request.FILES[  files   ]처럼 넣어서 하나하나 저장을 해준다.
+
+```python
+def create(request):
+    if request.method == "POST":
+        post_form = PostForm(request.POST, request.FILES)
+        # 할 필요 없음
+        # image_form = ImageForm(request.POST, request.FILES)
+        if post_form.is_valid():
+            post = post_form.save()
+            # 만약 여러개의 파일을 받고 싶다면 FILES안의 getlist로 받을 수 있다.
+            files = request.FILES.getlist('file')
+            for file in files:
+                request.FILES['file'] = file
+                # 위치 인자로 넘겨주려고 했던건데
+                # image_form = ImageForm(request.POST, request.FILES)
+                # 파일인자로 넘겨줘도 된다.
+                image_form = ImageForm(files=request.FILES)
+                if image_form.is_valid():
+                    image = image_form.save(commit=False)
+                    image.post = post
+                    image.save()
+            return redirect(post)
+            # return redirect('posts:detail', post.pk)
+    else:
+        post_form = PostForm()
+        image_form = ImageForm()
+    context = {'post_form': post_form, 'image_form': image_form}
+    return render(request, 'posts/form.html', context)
+```
+
+###### 8.1.10 list.html, detail.html
+
+```html
+{% for image in post.image_set.all %}
+	<img src="{{ image.file.url }}">
+{% endfor %}
+```
+
+혹은 하나만 가져오고 싶다면
+
+```html
+<img src="{{ post.image_set.first.file.url }}">
+```
+
+
+
+수정은 안된다. (인스타에서도 안됌) 글만 가능.
+
+지금은 form.html을 같이 쓰고 있기 때문에
+
+따라서 form.html에서 다음을 수정해준다.
+
+```html
+# form.html
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block body %}
+<div class="container">
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ post_form|crispy }}
+        {% if image_form %}
+            {{ image_form|crispy }}
+        {% endif %}
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
+```
 
 
 
@@ -641,7 +849,7 @@ c9/django_recrud 참조
 >
 > 검증작업. 
 
-#### 1. forms.py 생성
+#### 10.1 forms.py 생성
 
 forms.Form을 사용한 방법. Column들을 일일이 설정해줘야 한다.
 
@@ -730,7 +938,7 @@ class BoardForm(forms.ModelForm):
 
 
 
-#### 2. views.py 에 선언 
+#### 10.2 views.py 에 선언 
 
 ```python
 from .forms import MovieForm
@@ -750,7 +958,7 @@ def create(request):
 
 
 
-#### 2.1 models.py 설정
+#### 10.3 models.py 설정
 
 redirect(movie)를 사용하기 위해 get_absolute_url을 설정해줘야 함.
 
@@ -773,7 +981,7 @@ class Movie(models.Model):
 
 
 
-#### 3. forms.html 에 선언
+#### 10.4 forms.html 에 선언
 
 ```python
 {% extends 'base.html' %}
@@ -788,7 +996,7 @@ class Movie(models.Model):
 
 
 
-#### 4. get_object_or_404 함수
+#### 10.5 get_object_or_404 함수
 
 오브젝트를 가져와서 있으면 요청대로 처리하고 없으면 404에러를 반환하는 함수.
 
@@ -834,6 +1042,16 @@ def update(request, board_pk):
 6. crispy-forms app사용 (pip install django-crispy-forms)
 
 
+
+## 11. Extensions
+
+#### 11.1 shell_plus
+
+> 꼭 필요한건 아님. 입/출력 확인을 위한 도구.
+
+`shell_plus`를 이용하기 위해 `django_extenstions`이 pip install해야 한다.
+
+`settings.py`의 `INSTALLED_APPS`에 `django_extensions`가 있는지 확인
 
 
 
