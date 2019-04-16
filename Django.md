@@ -367,6 +367,16 @@ def pong(request):
 
 이 디렉토리 설정은 `settings.py` 의 가장 하단에 `STATIC_URL` 에 맞춰서 해야한다. (기본이 `/static/`)
 
+settings.py에 추가 설정을 해준다.
+
+```python
+...
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '','')    
+]
+...
+```
+
 1. 파일 생성
 
    `home/static/home/images/1.jpg`
