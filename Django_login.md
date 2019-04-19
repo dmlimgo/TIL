@@ -356,17 +356,39 @@ USER CHANGEFORM
 
 
 
-hashlib.md5('takhee.k@gmail.com'.encode('utf-8')).hexdigest()
+#### ?. Gravatar 적용하기
 
+html에서 필터로 활용하기 위해  gravatar.py를 만들어준다.
 
+templatetags에 저장해준다.
 
-html에서 python코드를 쓸 수 있음
+```python
+# templatetags/gravatar.py
+import hashlib
 
-img src="https://s.gravatar.com/avatar/{{ user.email|makehash }}?s=150"
+from django import template
 
+register = template.Library()
 
+@register.filter
+def makehash(email):
+    return hashlib.md5(email.strip().lower().encode('utf-8')).hexdigest()
+#예시-> hashlib.md5('takhee.k@gmail.com'.encode('utf-8')).hexdigest()
+
+```
+
+html에서 사용법
+
+```html
+{% load gravatar %}
+<img src="https://s.gravatar.com/avatar/{{ user.email|makehash }}?s=150">
+```
 
 위의 gravatar 주소 뒤에 &d=mp등으로 기본 아바타를 설정해 줄 수 있다. 주소를 넣을 수 도 있음.
+
+---
+
+
 
 
 

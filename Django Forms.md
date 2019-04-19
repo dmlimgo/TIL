@@ -55,3 +55,18 @@ class MyForm(forms.ModelForm):
         self.fields['myfield'].widget.attrs.update({'class' : 'myfieldclass'})
 ```
 
+
+
+### Meta 추가정보
+
+class Score(models.Model):
+    content = models.CharField(max_length=30)
+    value = models.IntegerField()
+    movie = models.ForeignKey(Movie, on_delete=models.CASCADE)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    
+
+    class Meta:
+        # 나는 이거 가지고 올 때 value값 순서로 가지고오고 싶어
+        # 그리고 내림차순으로 가져올래
+        ordering = ['-value']
