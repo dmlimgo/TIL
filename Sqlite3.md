@@ -125,7 +125,7 @@ pip install ipython # 주피터 노트북 이전에 쓰던 것
    Post.image_set.first.file.url
    Post.image_set -> None
    Post.image_set.first -> None
-   Post.image_set.file -> AttributeError: Nonetype has no file 뭐 이런식으로.
+   Post.image_set.first.file -> AttributeError: Nonetype has no file 뭐 이런식으로.
    ```
 
    ```python
