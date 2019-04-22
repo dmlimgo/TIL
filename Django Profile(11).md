@@ -74,3 +74,84 @@ def list(request):
     return render(request, 'posts/list.html', context)
 ```
 
+
+
+### 3. Query 줄이기
+
+> 알아만 두자
+
+#### 3.0 기본코드
+
+```python
+from django.db.models import Prefetch
+def detail(request, user_pk):
+    User = get_user_model()
+    user = get_object_or_404(User, pk=user_pk)
+    context = {'user_info': user}
+    return render(request, 'accounts/detail.html', context)
+```
+
+
+
+#### 3.1 Prefetch
+
+> query를 한번에 다 가져와서 query를 적게 날리자
+
+prefetch_related: 1:N/M:N -> N개를 미리 가져올때(JOIN table)
+
+select_related: 1:N -> 1개를 미리 가져올 때(JOIN)
+
+```python
+from django.db.models import Prefetch
+def detail(request, user_pk):
+    User = get_user_model()
+    user = get_object_or_404(User, pk=user_pk)
+    followings = user.followings.prefetch_related(
+                                            Prefetch('score_set',
+                                            queryset=Score.objects.select_related('movie').order_by('-value'),
+                                            to_attr='score_set_value_order'
+                                            ))
+    context = {'user_info': user}
+    return render(request, 'accounts/detail.html', context)
+```
+
+```html
+# 이 코드를
+{{ user_follow.score_set.first.movie.title }}
+{{ user_follow.score_set.first.value }}
+# 아래처럼 쓸 수 있다.
+# first는 queryset에서만 쓸 수 있으므로 0을 써줘야 한다.
+{{ user_follow.score_set_value_order.0.movie.title }}
+{{ user_follow.score_set_value_order.0.value }}
+```
+
+
+
+#### 3.2 Annotate
+
+> query를 줄여보자
+>
+> 2개를 1개로 아낄 수 있음
+
+Column을 추가해서 값을 넣어놓는 것
+
+```python
+from django.db.models import Prefetch
+def detail(request, user_pk):
+    User = get_user_model()
+    user = get_object_or_404(User.objects.annotate(
+        						followers_count=Count('followers'),
+        						followings_count=Count('followings')
+    							), pk=user_pk)
+    context = {'user_info': user}
+    return render(request, 'accounts/detail.html', context)
+```
+
+```html
+{{ user_info.followings.count }}
+{{ user_info.followers.count}}
+# 아래 코드처럼 쓸 수 있다.
+{{ user_info.followings_count }}
+{{ user_info.followers_count }}
+```
+
