@@ -301,4 +301,3 @@ swagger에서 볼 수 있다.
 
 ![serial_5](C:/Users/student/Desktop/TIL/image/serial_5.PNG)
 
-#### 
