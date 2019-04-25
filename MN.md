@@ -108,7 +108,7 @@ Reservation(patient=patient, doctor=doctor)
 #====================================
 ```
 
-
+* 중계모델이 없는 상태로 ManyToManyField를 사용하면 db에 column이 생기는게 아니라 중계모델이 생겨서 각각의 id값을 저장한다.
 
 #### 2. 응용
 

@@ -435,3 +435,32 @@ def function(request):
     {% endif %}
 ```
 
+
+
+**login이라고 설정해놔야 자동으로 로그인페이지로 간다.
+
+
+
+get_user_model()은 settings.py AUTH_USER_MODEL을 가져옴
+
+AUTH_USER_MODEL="Auth.User"가 기본값으로 설정되어 있따.
+
+---
+
+잘이해안감
+
+accounts/models.py
+
+```python
+class User(abstartuser):
+    pass
+```
+
+하면 UserCreationForm을 못씀.
+
+AUTH_USER_MODEL = accounts.User
+
+으로 바꿔줘야 됌..
+
+---
+
