@@ -27,12 +27,20 @@ git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo -e 'if command -v pyenv 1>/dev/null 2>&1; then\n  eval "$(pyenv init -)"\nfi' >> ~/.bashrc
-
 source ~/.bashrc
-pyenv install 3.6.7
-pyenv global 3.6.7
-python -V
+pyenv install 3.6.8
+pyenv global 3.6.8
+git clone https://github.com/pyenv/pyenv-virtualenv.git $(pyenv root)/plugins/pyenv-virtualenv
+echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
+exec "$SHELL"
+pyenv virtualenv 3.6.8 django-venv
+pyenv local django-venv
 pip install --upgrade pip
+pip install django==2.1.8
+echo '===========setting==========='
+pip list
+python -V
+echo '===========setting==========='
 ```
 
 * `echo 'export'` : pyenv path 설정
@@ -46,7 +54,7 @@ echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
 exec "$SHELL"
 ```
 
-완료 후 아래 명령어 복사
+플라스크 할사람은 아래것도 복사
 
 ```powershell
 pyenv virtualenv 3.6.7 flask-venv
