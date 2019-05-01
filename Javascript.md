@@ -6,7 +6,7 @@
 
 자바스크립트의 함수는 일급 객체이다.
 
-일급 객체의 조건
+==일급 객체의 조건==
 
 1. 변수나 특정한 오브젝트에(배열) 함수를 저장할 수 있다.
 2. 함수의 인자로 전달할 수가 있어야 한다.
@@ -16,45 +16,77 @@
 
 ### 0. 환경설정
 
-==구글 크롬의 Console창과 VS Code에서 실습을 진행한다.==
+- 구글 크롬의 Console창과 VS Code에서 실습을 진행한다.
 
-VS Code의 경우 open in broswer를 설치해두면 단축키로 브라우저를 열 수 있다.
+- ==VS Code==의 경우 *open in broswer*를 설치해두면 단축키로 브라우저를 열 수 있다.
 
-JavaScript (ES6) code snippets도 혹시모르니 설치해둔다.
+- *JavaScript (ES6) code snippets*도 혹시모르니 설치해둔다.
+
+
 
 ![js1](image\js1.PNG)
 
 
 
-몇가지 명령어
+### 1. Commands
 
-window.innerwidth
+* `script`태그는 대체로 `body`의 닫는 태그 위에 쓴다.
 
-window.print()
+* 이 문서에서는`script`태그는 생략한다.
 
-document.title
+* console창에서 밑의 줄로 이동해서 입력하려면 shift-enter를 사용하면 된다.
 
-document.title = '에듀싸피'
+  ```JS
+  <body>
+      ...
+      <script>
+      </script>    
+  </body>
+  ```
 
-document.write('SSAFY 짱! 구글짱!!')
+* 주석처리는 다음과 같이 한다.
 
+  ```JS
+  //
+  /* */
+  ```
 
+#### 1.1 document, window
 
-### 1. ...
+> 웹 문서 자체를 조작하는 메소드들을 가지고 있다.
 
-`script`태그는 대체로 `body`의 닫는 태그 위에 쓴다.
+##### 1.1.1 window.innerwidth
 
-`script`태그는 생략한다.
+> 현재 창의 너비를 출력한다
 
-console창에서 바로 밑줄 치려면 shift-enter를 하면 된다.
+##### 1.1.2 window.print()
 
-```html
-<body>
-    ...
-    <script>
-    </script>    
-</body>
+> 현재 창을 인쇄(출력)한다.
+
+##### 1.1.3 document.title
+
+```js
+> document.title = '에듀싸피'
+// 문서의 제목을 '에듀싸피'로 변경
 ```
+
+```js
+> document.title
+'에듀싸피'
+```
+
+##### 1.1.4 document.write()
+
+```js
+> document.write('SSAFY 짱!')
+// 문서에 'SSAFY 짱!' 을 출력한다.
+> document.write('<h1> SSAFY 짱! </h1>')
+// 태그도 사용 가능하다.
+```
+
+
+
+### 1.2 ~
 
 #### 1.1 alert
 
@@ -70,13 +102,6 @@ alert('자바스크립트, 안녕!')
 
 ```javascript
 console.log('안녕?')
-```
-
-#### 1.3 주석처리
-
-```js
-//asdfasdf
-/*asfdasdf*/
 ```
 
 #### 1.4 document.write
@@ -486,3 +511,31 @@ foods.forEach(function(element, idx, foods) {
 })
 ```
 
+#### 1.Example
+
+```js
+const avengers = ['닥터스트레인지', '토르', '헐크', '아이언맨', '스파이더맨', '그루트', '너구리', '앤트맨']
+avengers.forEach( hero => console.log(hero) )
+avengers.forEach( function (hero){console.log(hero)})
+// 2. map
+const numbers = [1, 2, 3]
+const strNumbers = numbers.map(number => String(number))
+console.log(strNumbers)
+const squareNumbers = numbers.map(number => number*number)
+console.log(squareNumbers)
+const squareNumbers2 = numbers.map(function(number){return number*number})
+console.log(squareNumbers2)
+const seulgi = [
+    {'velocity': 40, 'time': 50},
+    {'velocity': 100, 'time': 60},
+    {'velocity': 20, 'time': 1000},
+]
+const distances = seulgi.map(function(obj){
+    return obj.velocity * obj.time
+})
+console.log(distances)
+const distances2 = seulgi.map(obj => obj.velocity * obj.time)
+console.log(distances2)
+```
+
+하나 더 있음 정리해야함!!
