@@ -326,6 +326,7 @@ document.addEventListener('copy', function(e){
   const likeButtons = document.querySelectorAll('.like-button')
   likeButtons.forEach(function(button) {
       button.addEventListener('click', function(e){
+          e.preventDefault()
           const postId = e.target.dataset.id
           // console.log(postId)
           axios.get(`/posts/${postId}/like/`)
@@ -346,4 +347,43 @@ document.addEventListener('copy', function(e){
   </script>
   ```
 
-  
+- axios.post로 보내기
+
+  - axios의 설정에 csrf token을 추가해줘야 한다.
+
+  - [관련글](<https://cbuelter.wordpress.com/2017/04/10/django-csrf-with-axios/>)
+
+    ```js
+    axios.defaults.xsrfCookieName = 'csrftoken'
+    axios.defaults.xsrfHeaderName = 'X-CSRFToken'
+    ```
+
+- href 살려두고 href로 요청하기
+
+  ```js
+  const url = event.target.getAttribute('href')
+  axios.post(url)
+  ```
+
+- ajax 요청만 받기
+
+  ```python
+  if request.is_ajax():
+      ...
+      return JsonResponse(data)
+  else:
+      return HttpResponseBadRequest
+  ```
+
+  ```js
+  axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest'
+  ```
+
+
+
+### 3. 댓글 달기 실습
+
+<https://www.zerocho.com/category/HTML&DOM/post/59465380f2c7fb0018a1a263>
+
+
+
