@@ -1,6 +1,8 @@
-## Javascript
+# Javascript
 
 > 190430 강의내용
+
+[TOC]
 
 배경 : script를 돌리기 위한 표준들이 브라우저마다 달랐고 그 표준(ES1, ES2, ..., ES2017)들이 뭉쳐져서 여기까지 왔다.
 
@@ -14,7 +16,9 @@
 4. 이름과 상관없이 구별이 가능하다. (익명으로 표현 가능)
 5. 동적으로 속성값(property) 할당이 가능하다.
 
-### 0. 환경설정
+
+
+## 환경설정
 
 - 구글 크롬의 Console창과 VS Code에서 실습을 진행한다.
 
@@ -28,7 +32,7 @@
 
 
 
-### 1. Commands
+## 1. Commands
 
 * `script`태그는 대체로 `body`의 닫는 태그 위에 쓴다.
 
@@ -51,19 +55,23 @@
   /* */
   ```
 
-#### 1.1 document, window
 
-> 웹 문서 자체를 조작하는 메소드들을 가지고 있다.
 
-##### 1.1.1 window.innerwidth
+#### window.innerwidth
 
 > 현재 창의 너비를 출력한다
 
-##### 1.1.2 window.print()
+
+
+#### window.print()
 
 > 현재 창을 인쇄(출력)한다.
 
-##### 1.1.3 document.title
+
+
+#### document.title
+
+> 현재 문서의 제목에 접근한다.
 
 ```js
 > document.title = '에듀싸피'
@@ -75,7 +83,11 @@
 '에듀싸피'
 ```
 
-##### 1.1.4 document.write()
+
+
+#### document.write()
+
+> 현재 문서에 출력한다.
 
 ```js
 > document.write('SSAFY 짱!')
@@ -86,9 +98,15 @@
 
 
 
-### 1.2 ~
+#### document.querySelector('*query*')
 
-#### 1.1 alert
+> 가창 처음에 있는 *query*를 선택해서 반환, 없으면 null 반환
+
+![js2](image\js2.PNG)
+
+
+
+#### alert
 
 > 팝업메세지를 띄워준다.
 
@@ -96,7 +114,9 @@
 alert('자바스크립트, 안녕!')
 ```
 
-#### 1.2 console.log
+
+
+#### console.log
 
 > 디버깅을 위한 코드. Console창에 해당 메세지를 띄워준다.
 
@@ -104,21 +124,23 @@ alert('자바스크립트, 안녕!')
 console.log('안녕?')
 ```
 
-#### 1.4 document.write
 
-> 문서에 글자를 쓴다.
 
-```js
-document.write('<h1>SSAFY 최고</h1>')
-```
 
-#### 1.5 document.querySelector
 
-![js2](image\js2.PNG)
+## 2. Variable
 
-#### 1.6 var <i>varname</i>
+- 변수가 글로벌인지 아닌지에 대한 것은 반드시 선언을 해줘야 한다.
 
-변수가 글로벌인지 아닌지에 대한 것은 반드시 선언을 해줘야 한다.
+- 자바스크립트의 데이터 타입에는 - 원시타입이 있고 오브젝트 타입이 있는데
+
+  원시 타입에는 아래와 같은 것들이 있다.
+
+  Boolean(true, false), null, undefined, number, string
+
+#### var <i>varname</i>
+
+> ES6이전에 사용하던 변수 키워드. hoisting으로 어디에 선언되어있던 실행 가능하다.
 
 ```js
 // 변수 hoisting
@@ -135,16 +157,16 @@ console.log(phoneNumber) // phoneNumber is not defined error.
 
 ```js
 var d = 6
-var d = 9
+var d = 9 // 문제 없음
 ```
 
 
 
-#### 1.7 let, const 키워드 (ES6+ 에서 등장)
+#### let, const 키워드 (ES6+ 에서 등장)
 
-var의 단점을 개선해 새로 등장
-
-let은 변수에 const는 상수에 쓴다.
+> var의 단점을 개선해 새로 등장
+>
+> let은 변수에 const는 상수에 쓴다.
 
 ```js
 let e = 100
@@ -156,8 +178,6 @@ Uncaught TypeError: Assignment to constant variable.
 let e = 211
 e = 30
 ```
-
-
 
 var와 let의 차이
 
@@ -193,7 +213,7 @@ var는 for문 이후에도 사용 가능, let은 불가능
 
 
 
-#### 1.8 변수 합치기
+#### 변수 합치기 (String)
 
 ```js
 const firstname = 'happy'
@@ -207,9 +227,7 @@ document.write(`<h1>${name}</h1>`)
 
 
 
-#### 1.9 prompt
-
-> 변수 입력받기
+#### prompt(변수 입력받기)
 
 ```js
 let username = prompt('너 누구냐?')
@@ -219,7 +237,11 @@ document.write(message)
 
 
 
-#### 1.10 if 조건문
+
+
+## 3. if, while, for
+
+#### if 조건문
 
 ```js
 let username = prompt('너 누구냐?')
@@ -241,7 +263,7 @@ document.write(message)
 
 
 
-#### 1.11 while 
+#### while 조건문
 
 ```js
 // while
@@ -261,7 +283,7 @@ while (i < 10) {
 
 
 
-#### 1.12 for
+#### for 반복문
 
 ```js
 let myArray = [1, 2, 3]
@@ -276,64 +298,281 @@ for (let k of myArray) {
 
 
 
-#### 1.13 array
+
+
+## 4. Array (Object)
+
+#### 선언
 
 ```js
 let numbers = [1, 2, 3, 4]
 ```
 
-###### 1.13.1 
+
+
+#### *arr*.length
+
+> 배열의 길이
+
+
+
+#### *arr*.reverse()
+
+> 배열을 뒤집고 리턴, python과 다르게 변수에 받아두지 않아도 된다.
 
 ```js
-> numbers.length
-4
-> numbers.reverse()
-[4, 3, 2, 1]
-> numbers[0]
-1
-> numbers[-1]
-Error
-> numbers.push('push') // 길이와 값을 리턴
-  numbers
-(5) [1, 2, 3, 4, "push"]
-> numbers.pop()
-// 범위 밖이면 제일 마지막거 뽑는다.
-4
-```
-
-```js
-> numbers.include(1)
-true
-> numbers.join('-')
-"1-2-3"
-> numbers.indexOf(1)
-0
-> numbers.indexOf(9) //없는 값
--1
-> numbers.shift() // 앞의 값을 뺌
-1
-> numbers.unshift(1) // 길이를 리턴
-2
-```
-
-```js
-> numbers.sort()
-[1, 1, 2, 3]
-> numbers.slice(0, 2)
-(2) [1, 1]
-> numbers.slice(-2) // 음수는 인덱스는 안되고 슬라이스는 됌
-(2) [2, 3]
+numbers.reverse() //[4, 3, 2, 1]
 ```
 
 
 
-#### 1.14 dict
+#### *arr*[] (원소 접근)
 
-자바스크립트의 데이터 타입에는 - 원시타입이 있고 오브젝트 타입이 있는데
+```js
+numbers //[4, 3, 2, 1]
+numbers[0] //4
+numbers[-1] //Error (정확한 양의 정수 index만 가능)
+```
 
-원시 타입에는 아래와 같은 것들이 있다.
 
-Boolean(true, false), null, undefined, number, string
+
+#### *arr*.push(*val*)
+
+> 배열의 마지막에 요소를 추가하고 길이를 반환
+
+```js
+numbers //[4, 3, 2, 1]
+numbers.push('push') //5 (길이를 반환)
+numbers //(5) [1, 2, 3, 4, "push"] (길이와 배열 반환)
+```
+
+
+
+#### *arr*.pop()
+
+> 뭐를 인자로 넘기던 제일 마지막거 뽑는다. 범위 밖도 포함.
+
+```js
+numbers.pop() //4
+```
+
+
+
+#### *arr*.unshift(*val*)
+
+> 배열의 처음에 요소를 추가하고 길이를 반환
+
+```js
+numbers //[1, 2, 3, 4]
+numbers.unshift('c') //5
+numbers //['c', 1, 2, 3, 4]
+```
+
+
+
+#### *arr*.shift()
+
+> 배열의 처음의 요소를 뽑는다.
+
+```js
+numbers //['c', 1, 2, 3, 4]
+numbers.shift() //'c'
+numbers //[1, 2, 3, 4]
+```
+
+
+
+#### *arr*.includes(*val*)
+
+> 배열에 포함되어있는지 확인
+
+```js
+numbers //[1, 2, 3, 4]
+numbers.include(1) //true
+numbers.include(0) //false
+```
+
+
+
+#### *arr*.join(*val*)
+
+> python의 join함수와 같다
+
+```js
+numbers //[1, 2, 3, 4]
+numbers.join() //"1,2,3,4"
+numbers.join('') //"1234"
+numbers.join('-') //"1-2-3-4"
+```
+
+
+
+#### *arr*.indexOf(*val*)
+
+> 해당 val의 인덱스를 반환한다.
+
+```js
+numbers //[1, 2, 3, 4]
+numbers.indexOf(1) //0
+numbers.indexOf(9) //-1 (없는 값)
+```
+
+
+
+#### *arr*.sort()
+
+> 배열을 정렬하고 길이와 정렬된 배열 반환.
+
+```js
+numbers //[3, 4, 1, 2]
+numbers.sort() //(4) [1, 2, 3, 4]
+numbers //(4) [1, 2, 3, 4]
+```
+
+
+
+#### *arr*.slice(*start*, *end*)
+
+> 잘린 배열을 반환.
+
+```js
+numbers //[1, 1, 2, 4, 5]
+numbers.slice(2) //(3) [2, 4, 5]
+numbers.slice(1, 3) //(2) [1, 2]
+numbers.slice(-2) //(2) [4, 5] (음수 접근이 indexOf에서는 안되지만 slice는 가능)
+```
+
+
+
+#### *arr*.forEach(*function*)
+
+> 배열의 각각의 원소에 대해 함수를 실행하는 메서드
+
+```js
+let foods = ['빠삐코', '스크류바', '메로나']
+foods.forEach(element => console.log(element))
+//빠삐코
+//스크류바
+//메로나
+```
+
+> 변수의 갯수에 따라 표현되는 요소가 늘어난다
+
+```js
+foods.forEach((element,idx) => console.log(element,idx))
+//빠비코 0
+//스크류바 1
+//메로나 2
+```
+
+```js
+foods.forEach((element, idx, food) => console.log(element, idx, food))
+//빠삐코 0 
+  ▶ (3) ["빠삐코", "스크류바", "메로나"]
+//스크류바 1
+  ▶ (3) ["빠삐코", "스크류바", "메로나"]
+//메로나 2
+  ▶ (3) ["빠삐코", "스크류바", "메로나"]
+```
+
+
+
+#### *arr*.map(*function*)
+
+> python의 map를 생각하자.
+
+```js
+const numbers = [1, 2, 3]
+const strNumbers = numbers.map(number => String(number)) 
+strNumbers //["1", "2", "3"]
+```
+
+```js
+const squareNumbers = numbers.map(number => number * number)
+squareNumbers //[1, 4, 9]
+```
+
+```js
+const seulgi = [
+    {'velocity': 40, 'time': 50},
+    {'velocity': 50, 'time': 100},
+    {'velocity': 20, 'time': 580}
+]
+const distances = seulgi.map(obj => obj.velocity * obj.time)
+```
+
+
+
+#### *arr*.filter()
+
+> 필터 즉 해당하는 값으로 된 배열을 리턴한다.
+
+```js
+const nums = [1, 5, 6, 8]
+const evenNums = nums.filter(num => num % 2 === 0)
+evenNums //[6, 8]
+```
+
+```js
+const drinks = [
+    {type: 'caffeine', name: 'coldbrew'},
+    {type: 'caffeine', name: 'green tea'},
+    {type: 'juice', name: 'orange'},
+    {type: 'juice', name: 'lemon'},
+]
+const nonCaffeines = drinks.filter(each => each.type !== 'caffeine')
+```
+
+
+
+#### *arr*.reduce(*function*, *initialvalue*)
+
+> forEach와 비슷하지만 누적값과 현재값을 받아서 누적된 결과값을 리턴한다.
+>
+> initialvalue를 넘겨주지 않으면 첫번째 인자를 건너 뛴다.
+
+```js
+const reduceNum = [1, 5, 6]
+const reduceResult = reduceNum.reduce((result, num) => result + num*10, 0)
+reduceResult //120
+```
+
+
+
+#### *arr*.find()
+
+> 찾아주는 함수
+
+```js
+const dc = ['슈퍼맨', '베트맨', '조커']
+const badguy = dc.find(name => name === '조커')
+badguy //"조커"
+```
+
+
+
+#### typeof *type*
+
+> 타입을 반환
+
+```js
+typeof numbers //"object"
+```
+
+```js
+typeof [1, 23, 4] //"object"
+typeof 1 //"number"
+```
+
+
+
+
+
+## 5. Dict
+
+> Key - Value 로 이루어진 데이터 구조이다.
+
+#### 기본 구조
 
 ```js
 // 자바스크립트 object 표기법
@@ -344,17 +583,9 @@ let seulgi = {
 }
 ```
 
-```js
-> typeof seulgi
-"object"
-> typeof [1, 23, 4]
-"object"
-> typeof 1
-"number"
-```
+ES6+ 이후로는 아래의 방법을 권장한다.
 
 ```js
-// ES6+
 // 변수를 그대로 넣으면 변수명: 값
 let name = 'taehyun'
 let stuffs = ['공기청정기', '커피머신']
@@ -362,67 +593,140 @@ let taehyun = {
     name,
     stuffs
 }
-let jsonData = JSON.stringify(taehyun)
 ```
 
+
+
+#### JSON.stringify(*val*)
+
+> Json형식의 데이터를 string형식으로 바꿔주는 메서드, undefined를 리턴하긴 한다
+
 ```js
-> jsonData
-"{"name":"taehyun","stuffs":["공기청정기","커피머신"]}"
+let jsonData = JSON.stringify(taehyun) 
+jsonData //"{"name":"taehyun","stuffs":["공기청정기","커피머신"]}"
 ```
+
+
+
+#### JSON.parse(*val*)
+
+> string형식의 데이터를 Json형식으로 바꿔주는 메서드.
 
 ```js
 let jsonParse = JSON.parse(jsonData)
-```
-
-```js
-> jsonParse
-{name: "taehyun", stuffs: Array(2)}
+jsonParse //{name: "taehyun", stuffs: Array(2)}
 ```
 
 
 
-#### 1.15 function
+
+
+## 6. Function
+
+#### 함수 선언식
 
 ```js
-//1. 함수 선언식
 function add(num1, num2) {
     return num1 + num2
 }
-console.log(add(1, 3))
-----------------------------
-4
-//2. 함수 표현식
-//함수 자체를 변수로 저장해서 씀(1급개체)
-let add2 = function add3(num1, num2){
+console.log(add(1, 3)) //4
+typeof add //function
+```
+
+
+
+#### 함수 표현식
+
+> 함수 자체를 변수로 저장해서 사용한다. (1급 객체)
+
+```js
+let add = function adder(num1, num2) {
     return num1 + num2
 }
-console.log(add2(1, 3))
-//console.log(add3(1, 3)) 오류
-----------------------------
-4
-// 3. ES6+ Arrow Function
+console.log(add(1, 3)) //4
+console.log(adder(1, 3)) //Error
+typeof add //function
+```
+
+
+
+#### 화살표 함수(Arrow Function)
+
+> ES6+, 위의 함수와 100% 동일한 것이 아님.
+
+```js
 let sub = (num1, num2) => {
     return num1 - num2
 }
-// 3-1. 인자가 하나인 경우, () 생략가능
-//		단순 리턴인 경우(리턴이 한줄에 딱 끝나는 경우), {} 및 리턴 키워드 생략 가능
-let greeting = name => `${name}, 안녕!`
-let mul = (num1, num2) => num1 * num2
-console.greeting('동명')
-console.log(mul(1, 4))
------------------------------
-"동명, 안녕!"
-4
-// 3-2. 인자가 없는 경우에는 () 작성
-let hello = () => 'hello, world!'
-// object 리턴 시 반드시 () 묶어서 작성
-let me = (name, age) => ({name, age})
-sonsole.log(me('hi', 3))
-// 익명함수 만들어 즉시 실행
-((a, b) => a * b)(4, 5)
 ```
 
-실습 Arrow Function으로 바꿔보기
+##### 기본인자(default args)
+
+```js
+let person = (name='동명') => {
+    return `${name}, 안녕!`
+}
+person() //동명, 안녕!
+person('승만') //승만, 안녕!
+```
+
+
+
+##### syntactic sugar
+
+> 인자가 하나인 경우, 괄호`()` 생략가능
+>
+> 단순 리턴인 경우(한줄에 끝나는 경우), `{}` 및 `return` 키워드 생략 가능
+
+```js
+let greeting = name => `${name}, 안녕!`
+console.log(greeting('동명')) //동명, 안녕!
+```
+
+```js
+let mul = (num1, num2) => num1 * num2
+console.log(mul(2, 4)) //8
+```
+
+> 인자가 없는 경우에는 `()` 작성
+
+```js
+let hello = () => 'hello, world!'
+console.log(hello()) //hello, world!
+```
+
+> `object` 리턴 시 반드시 `()` 묶어서 작성
+
+```js
+let me = (name, age) => ({name, age})
+console.log(me('hi', 33)) //{name: "hi", age: 33}
+
+let me = (name, age) => (name, age)
+console.log(me('hi', 33)) //33
+let me = (name, age) => {name, age}
+console.log(me('hi', 33)) //'hi'
+```
+
+##### 익명함수
+
+```js
+((a, b) => a * b)
+(function(num) {return num*num}) (자바스크립트가 알아서 ;를 하기 때문에 괄호를 씌운다.)
+```
+
+> 즉시 실행 (익명함수 + 호출) - IIFE(Immediately Invoked Function Expression)
+
+```js
+(function(num) {return num*num})(5) //25
+```
+
+
+
+
+
+## 9. 실습
+
+#### Arrow Function으로 바꿔보기
 
 ```python
 def negative(num):
@@ -437,42 +741,12 @@ def veitnam(member):
 ```js
 let veitnam = (member) => {
     member_base = '황여진'
-    console.log(member)
-    console.log(member_base)
     return `${member_base}와 ${member}가 베트남에 가요`
 }
-console.log(veitnam('누군가'))
+console.log(veitnam('누군가')) //황여진와 누군가가 베트남에 가요
 ```
 
-```js
-// 만약, default args (기본인자)
-let bonjour = (name='동명') => `${name}, bonjour`
-```
-
-```js
-// 4. 익명 함수
-(function(num) {return num*num}) // 자바스크립트가 알아서 ;를 하기 때문에 괄호를 씌운다.
-```
-
-```js
-// 5. 즉시 실행 함수 (익명함수 + 호출) - IIFE(Immediately Invoked Function Expression)
-(function(num) {return num*num})(5)
-```
-
-
-
-```js
-// 배열을 다 받아서 다 더해주는 함수를 작성 해주세요.
-// numberAddEach(numbers)
-const numberAddEach = (numbers) => {
-    let hap = 0
-    for (let i = 0; i < numbers.length; i++){
-        hap += numbers[i]
-    }
-    return hap
-}
-console.log(numberAddEach([1, 2, 3, 4, 5, 10000]))
-```
+#### 배열을 받아 다 계산하는 함수 작성하기
 
 ```js
 const numberEach = (numbers, oper) => {
@@ -488,7 +762,7 @@ const SubEach = (number, result = 0) => result - number
 const MulEach = (number, result = 1) => result * number
 const DivEach = (number, result = 1) => result / number
 
-// 롤백
+// 콜백
 console.log(numberEach([1,2,3], AddEach))
 console.log(numberEach([1,2,3], SubEach))
 console.log(numberEach([1,2,3], MulEach))
@@ -511,31 +785,3 @@ foods.forEach(function(element, idx, foods) {
 })
 ```
 
-#### 1.Example
-
-```js
-const avengers = ['닥터스트레인지', '토르', '헐크', '아이언맨', '스파이더맨', '그루트', '너구리', '앤트맨']
-avengers.forEach( hero => console.log(hero) )
-avengers.forEach( function (hero){console.log(hero)})
-// 2. map
-const numbers = [1, 2, 3]
-const strNumbers = numbers.map(number => String(number))
-console.log(strNumbers)
-const squareNumbers = numbers.map(number => number*number)
-console.log(squareNumbers)
-const squareNumbers2 = numbers.map(function(number){return number*number})
-console.log(squareNumbers2)
-const seulgi = [
-    {'velocity': 40, 'time': 50},
-    {'velocity': 100, 'time': 60},
-    {'velocity': 20, 'time': 1000},
-]
-const distances = seulgi.map(function(obj){
-    return obj.velocity * obj.time
-})
-console.log(distances)
-const distances2 = seulgi.map(obj => obj.velocity * obj.time)
-console.log(distances2)
-```
-
-하나 더 있음 정리해야함!!
