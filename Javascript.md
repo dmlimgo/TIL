@@ -160,6 +160,13 @@ var d = 6
 var d = 9 // 문제 없음
 ```
 
+가장 전역에 선언되어 window에서 인식 가능하다. (let, const는 불가)
+
+```JS
+var a = 1
+window.a //1
+```
+
 
 
 #### let, const 키워드 (ES6+ 에서 등장)
@@ -195,6 +202,8 @@ console.log(i) //i 값이 증가한 채로 존재함
 3
 ```
 
+var는 for문 이후에도 사용 가능, let은 불가능
+
 ```js
 for (let i = 0; i < 3; i++){
 	console.log(i)
@@ -209,7 +218,14 @@ console.log(i) //i 값이 없음
 Uncaught ReferenceError: i is not defined at ~
 ```
 
-var는 for문 이후에도 사용 가능, let은 불가능
+let, const는 전역으로 선언되지 않아 window에서 읽을 수 없다.
+
+```js
+let a = 1
+window.a //undefined
+```
+
+
 
 
 
@@ -719,6 +735,36 @@ console.log(me('hi', 33)) //'hi'
 ```js
 (function(num) {return num*num})(5) //25
 ```
+
+
+
+
+
+## 7. type
+
+> JS는 이상하니까 그냥 알아두는게 좋다. 신경써야할 것만 정리
+
+```js
+typeof NaN //number
+isNaN(NaN) //true
+NaN === NaN //false
+isNaN(0) //false
+typeof Infinity //number
+typeof [] //object
+typeof (() => {}) //function
+typeof typeof '123' //string
+```
+
+```js
+1 + '1' //"11"
+2 * '12' //24
+parseInt('123') //123
+String(2) //"2"
+```
+
+
+
+
 
 
 
