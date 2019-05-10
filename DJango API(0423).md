@@ -91,6 +91,20 @@ class MusicSerializer(serializers.ModelSerializer):
         fields = ['id', 'title', 'artist']
 ```
 
+`urls.py` path 연결
+
+```python
+from django.urls import path
+from . import views
+
+app_name = 'musics'
+urlpatterns = [
+    path('musics/', views.music_list)
+]
+```
+
+
+
 `views.py` 메소드 선언
 
 ```python

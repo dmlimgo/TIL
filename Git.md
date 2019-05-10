@@ -150,3 +150,94 @@ PS1 = ~~~(%s)") \n$ '
 
 
 vi ~/.bashrc
+
+
+
+
+
+## Branch
+
+#### git checkout -b '*branchname*'
+
+> branch를 생성하고 이동
+
+git branch '*branchname*' 과 git checkout '*branchname*' 을 합친것과 같다.
+
+![git1](image/git1.JPG)
+
+
+
+#### git checkout master
+
+> master로 이동
+
+![git2](image/git2.JPG)
+
+
+
+#### git branch
+
+> branch 확인
+
+![git3](image/git3.JPG)
+
+
+
+#### git merge *branchname*
+
+> 브랜치와 master(현재상태)를 합친다
+
+
+
+#### git branch -d *branchname*
+
+> 브랜치 삭제
+
+대문자 D는 진짜 어쩔 수 없을 때(코드가 아예 못 쓰게 되었을 때) 강제 삭제할 때 쓴다.
+
+
+
+#### rebase
+
+> 이런 용어는 거르자. 커밋 이력을 바꿔버림.
+
+
+
+#### 일어날 수 있는 상황들
+
+- 서로 다른 파일을 추가하고 수정했을 경우
+
+  - Merge made by the 'recursive' strategy. 가 뜨면서 자동으로 잘 합쳐진다.
+
+- 같은 파일을 수정했을 경우
+  ```bash
+  student@DESKTOP MINGW64 ~/Desktop/gitbranch (master)
+  $ git merge jeong
+  Auto-merging profile.txt
+  CONFLICT (content): Merge conflict in profile.txt
+  Automatic merge failed; fix conflicts and then commit the result.
+  ```
+
+  두개의 브랜치를 태깅을 해줌
+
+  ```txt
+  <<<<<<< HEAD
+  프사 이미지 100*100
+  반갑습니다^^
+  =======
+  프사 크기 300*300
+  안녕.
+  >>>>>>> jeong
+  ```
+
+  Visual Studio Code에서는 마우스 클릭만으로 어떻게 수정할지 정할 수 있다.
+
+  수정을 마치고 난 이후에는 
+
+  ```bash
+  /gitbranch (master|MERGING)
+  ```
+
+  를 계속 띄워줌으로써 merge와 commit을 해야한다고 말해준다.
+
+  `git add .`후 `git commit`해주면 된다.

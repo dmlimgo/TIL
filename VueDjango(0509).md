@@ -58,7 +58,7 @@ $ pip install django-cors-headers
 
 설치 후 Django의 `INSTALLED_APPS`에 `corsheaders`를 추가,
 
-`MIDDLEWARE`에 `corsheaders.middleware.CorsMiddleware`를 추가해주는데 문서에 보면 정확한 위치가 나와있다(원래 있는 것?을 써준걸 보면). 보통 이렇게 굳이 이렇게 위치를 지정해주면 따라줘야 한다.
+`MIDDLEWARE`에 `corsheaders.middleware.CorsMiddleware`를 추가해주는데 문서에 보면 정확한 위치(`'django.middleware.common.CommonMiddleware',`위)가 나와있다(원래 있는 것?을 써준걸 보면). 보통 이렇게 굳이 이렇게 위치를 지정해주면 따라줘야 한다.
 
 공식문서의 Configures를 보면 `ALLOW_ALL` 할거냐 `WHITELIST`를 쓸거냐 물어보는데 
 
