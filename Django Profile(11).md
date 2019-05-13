@@ -41,6 +41,17 @@ def profile_update(request):
 settings.py
 
 ```python
+INSTALLED_APPS = [
+    ...
+    # 'accounts',
+    'accounts.apps.AccountsConfig',
+    ...
+]
+```
+
+
+
+```python
 AUTH_USER_MODEL = 'accounts.User'
 ```
 

@@ -63,3 +63,42 @@ source Scripts/activate
 ```
 
 한다. git 쓰기 좋아서 3.7버전씀
+
+
+
+![dj_local1](image/dj_local1.JPG)
+
+
+
+## mac
+
+zzu.li/c9 내용대로 하고
+
+로컬에서 할 때는 각각의 버전이 다를 수 있으므로 `.python-version` 폴더를 없애주어야 한다.
+
+애초에 `gitignore`에 등록해주도록 하자.
+
+```bash
+rm -rf .python-version
+```
+
+가상환경 실행할 폴더로 이동해서 아래 명령어를 실행해준다.
+
+```bash
+pyenv local '가상환경 이름'
+```
+
+pip 환경을 확인하자.
+
+```bash
+pip list
+```
+
+requirement.txt에 있는 내용으로 환경설정을 할 수도 있다.
+
+```bash
+pip install -r requirement.txt
+```
+
+
+
