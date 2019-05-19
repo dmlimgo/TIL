@@ -6,7 +6,7 @@
 
 콘솔로 이동 > 프로젝트 추가
 
-![fb1](C:\Users\student\Desktop\TIL\image\fb1.PNG)
+![fb1](\image\fb1.PNG)
 
 
 
