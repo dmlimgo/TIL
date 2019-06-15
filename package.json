@@ -1,0 +1,26 @@
+{
+  "name": "lim",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node_1.js",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.1",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmlimgo/TIL.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmlimgo/TIL/issues"
+  },
+  "homepage": "https://github.com/dmlimgo/TIL#readme"
+}

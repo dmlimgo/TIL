@@ -24,6 +24,8 @@
 
 
 
+#### capsule.bxb
+
 id를 지정하고 나면 다음과 같이 폴더가 생성되고 `capsule.bxb` 파일이 열려 있다.
 
 ![bixby3](image/bixby3.png)
@@ -37,11 +39,17 @@ capsule {
   targets {
     target (bixby-mobile-en-US)
   }
-  runtime-flags {
-    support-halt-effect-in-computed-inputs
+  ...
   }
 }
 ```
 
 - Version : capsule의 버전을 나타낸다.
 - format : capsule간의 호환성을 위한 capsule format의 버전을 나타낸다.
+
+#### 
+
+#### 기본 구성 (dice example 기준)
+
+![bixby4](/Users/limdongmyeong/Desktop/TIL/image/bixby4.png)
+
