@@ -1,8 +1,11 @@
 let express = require("express")
 let app = express()
 
-app.get('/', function(req, res){
-    res.send('welcome back!')
-})
+let index = require("./routers/index/index.js")
+
+app.use ('/', index)
+
+app.set('view engine', 'ejs')
+app.set('views', './views')
 
 app.listen(3000)

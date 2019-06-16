@@ -123,3 +123,260 @@ $ node app.js
 
 Chrome의 주소창에 localhost:3000을 입력하여 출력된 것을 볼 수 있다.
 
+
+
+## nodemon 활용하기
+
+Node.js의 js파일들은 수정해도 자동으로 서버에 반영해주지 않기 때문에 nodemon을 사용하여 자동으로 반영할 수 있다.
+
+는 나중에.
+
+
+
+## ejs 사용하기
+
+view를 구성해보자
+
+```bash
+$ npm install ejs --save
+```
+
+설치 후
+
+```bash
+$ mkdir views
+$ cd views
+$ touch index.ejs
+```
+
+폴더구성
+
+```bash
+myapps
+ ㄴapp.js
+ ㄴviews
+   ㄴindex.ejs
+```
+
+app.js의 코드를 변경해준다.
+
+4번째 줄 코드로 ejs를 사용하고, 5번째 줄 코드에서 views폴더의 위치를 정해준다.
+
+이후 render를 이용하여 파일명을 인자에 넣어주면 index가 보이게 된다.
+
+```js
+let express = require("express")
+let app = express()
+
+app.set('view engine', 'ejs')
+app.set('views', './views')
+
+app.get('/', function(req, res){
+    res.render('index')
+})
+
+app.listen(3000)
+```
+
+index.ejs
+
+```ejs
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    this is index!
+</body>
+</html>
+```
+
+
+
+## POST요청 보내기
+
+index.ejs를 재구성한다.
+
+```ejs
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    this is index!
+    <form action="" method="POST">
+        <input type="email" name="email">
+        <input type="password" name="password">
+        <input type="submit">
+    </form>
+</body>
+</html>
+```
+
+index2.ejs를 생성하여 post로 보낸 요청을 받아 출력하는 코드를 작성한다.
+
+```ejs
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <%= email %>
+    <%= password %>
+</body>
+</html>
+```
+
+app.js를 다음과 같이 재구성한다.
+
+```js
+let express = require("express")
+let app = express()
+
+app.set('view engine', 'ejs')
+app.set('views', './views')
+
+app.get('/', function(req, res){
+    res.render('index')
+})
+
+app.post('/', function(req, res){
+    let context = {}
+    let email = req.body.email
+    let password = req.body.password
+
+    context.email = email
+    context.password = password
+
+    res.render('index2', context)
+    console.log(email, password)
+})
+
+app.listen(3000)
+```
+
+하지만 body에 있는 내용을 가져오기 위해서는 body-parser가 필요하다.
+
+```bash
+$ npm install body-parser --save
+```
+
+body-parser 사용을 위한 코드를 추가해준다.
+
+app.js
+
+```js
+let express = require("express")
+let bodyParser = require("body-parser")
+let app = express()
+
+app.set('view engine', 'ejs')
+app.set('views', './views')
+
+app.use(bodyParser.urlencoded())
+app.use(bodyParser.json())
+
+app.get('/', function(req, res){
+    res.render('index')
+})
+
+app.post('/', function(req, res){
+    let context = {}
+    let email = req.body.email
+    let password = req.body.password
+
+    context.email = email
+    context.password = password
+
+    res.render('index2', context)
+    console.log(email, password)
+})
+
+app.listen(3000)
+```
+
+추가로 console.log를 이용하면 node.js에서는 인터넷 브라우저가 아닌 터미널에서 출력되는 것을 확인할 수 있다.
+
+deprecated가 뜨는데 일단은 무시하자.
+
+
+
+## 코드 분리하기(라우터 사용하기)
+
+Django 프로젝트에서 app별로 url이나 views를 따로 사용했듯이 분리해주도록 하자.
+
+다음과 같이 코드를 분리한다.
+
+```
+myapps
+ ㄴapp.js
+ ㄴrouters
+   ㄴindex
+     ㄴindex.js
+ ㄴviews
+   ㄴindex.ejs
+   ㄴindex2.ejs
+```
+
+app.js
+
+```js
+let express = require("express")
+let app = express()
+
+let index = require("./routers/index/index.js")
+
+app.use ('/', index)
+
+app.set('view engine', 'ejs')
+app.set('views', './views')
+
+app.listen(3000)
+```
+
+index라는 변수에 경로를 설정해 주고, app.use를 이용해서 / 경로 뒤에 붙여준다.
+
+index.js
+
+```js
+let express = require("express")
+let bodyParser = require("body-parser")
+let router = express.Router()
+
+router.use(bodyParser.urlencoded())
+router.use(bodyParser.json())
+
+router.get('/', function(req, res){
+    res.render('index')
+})
+
+router.post('/', function(req, res){
+    let context = {}
+    let email = req.body.email
+    let password = req.body.password
+
+    context.email = email
+    context.password = password
+
+    res.render('index2', context)
+    console.log(email, password)
+})
+
+module.exports = router
+```
+
+router에 router인스턴스를 선언해주고 module.exports로 router가 동작할 수 있도록 해준다.
+
+이후 app.~ 대신 router.~로 바꿔준다.
