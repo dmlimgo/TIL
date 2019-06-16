@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<title>CSS</title>
+		<style>
+			div {
+				width: 100px;
+				height: 100px;
+				position: absolute;
+                border-radius: 4px;
+                box-shadow: 0 0 5px grey;
+			}
+            div:hover {
+                box-shadow: 0 0 5px greenyellow;
+            }
+			div.x {
+				background-color: #2196F3;
+				top: 20px;
+				left: 200px;
+			}
+			div.y {
+				background-color: #1976D2;
+				top: 50px;
+				left: 260px;
+                z-index: 1001;
+			}
+			div.z {
+				background-color: #0D47A1;
+				top: 80px;
+				left: 230px;
+                z-index: 1000;
+			}
+			div.xx {
+				background-color: #F44336;
+				top: 30px;
+				left: 50px;
+                z-index: 999;
+			}
+			div.yy {
+				background-color: #D32F2F;
+				top: 60px;
+				left: 110px;
+			}
+			div.zz {
+				background-color: #B71C1C;
+				top: 90px;
+				left: 70px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="x"></div>
+		<div class="y"></div>
+		<div class="z">
+			<div class="xx"></div>
+			<div class="yy"></div>
+			<div class="zz"></div>
+		</div>
+	</body>
+</html>
