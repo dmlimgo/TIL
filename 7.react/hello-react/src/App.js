@@ -1,29 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import MyName from './MyName';
+import Counter from './Counter';
 
-function App() {
-  
-  return (
-    <div className="App">
-      리액트
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div>
+        <MyName name="리액트" />
+        <MyName />
+        <Counter />
+      </div>
+    );
+  }
 }
 
 export default App;
-
-// import React, { Component } from 'react';
-
-// class App extends Component {
-//   render() {
-//     const name = 'react';
-//     return (
-//       <div>
-//         hello {name}!
-//       </div>
-//     );
-//   }
-// }
-
-// export default App;

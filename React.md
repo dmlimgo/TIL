@@ -61,7 +61,7 @@ $ cd [앱이름]
 $ yarn start
 ```
 
-### App.js
+### 1. App.js
 
 컴포넌트를 만들기 위해서는 App.js파일을 보면 된다. 아래는 기본으로 주어지는 구조이다.
 
@@ -112,7 +112,7 @@ export default App;
 
 
 
-### index.js
+### 2. index.js
 
 기본으로 주어지는 코드는 다음과 같다.
 
@@ -147,5 +147,168 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 를 찾아서 렌더링 해준다.
 
-**태그는 꼭 닫혀있어야 한다. input이나 br태그도 닫아주어야 한다.**
+
+
+### 3. JSX (javascript XML)
+
+- 태그는 꼭 닫혀있어야 함 input이나 br도 닫아줘야 한다.
+- 두개 이상의 엘리먼트는 무조건 하나의 엘리먼트로 감싸져있어야 한다.
+- JSX내부에서 자바스크립트 값을 사용할 땐 {변수명}과 같이 이용할 수 있다.
+
+- 조건부 렌더링은 삼항 연산자나 AND 연산자를 사용한다. if문은 IIFE(즉시 실행 함수 표현)을 사용한다.
+
+  ```js
+  <div>
+    {
+      1 + 1 === 2
+      ? (<div>맞아요!</div>)
+    	: (<div>틀려요!</div>)
+    }
+  </div>
+  ```
+
+  ```js
+  <div>
+    {
+    	(function() {
+        pass
+      })()
+  	}
+  </div>
+  or arrow function
+  ```
+
+- 주석은 `{/*...*/}` 사이에 넣거나 태그 사이에 넣을 수도 있다.
+
+
+
+### 4. Style과 className
+
+- style은 다음과 같이 적용할 수 있다.
+
+  ```js
+  const style={backgroundColor: 'black'};
+  ...
+  <div style={style}>
+    hi
+  </div>
+  ```
+
+- class은 App.css에 class를 선언하고 className으로 사용할 수 있다.
+
+
+
+### 5. 새 컴포넌트 만들기
+
+- 받아온 값은 `this.props`로 표시 가능하다.
+- 기본값은 `defaultProps`에 설정한다.
+
+#### 5.1 함수형 컴포넌트
+
+- 단순히 props만 받아서 보여주는 컴포넌트의 경우 함수형 컴포넌트로 간편하게 작성할 수 있다.
+
+### 
+
+### 6. State (동적 데이터)
+
+- Class fields 문법 사용, 사용하지 않는다면 constructor 사용(불편하고 느림)
+- arrow function을 사용하지 않으면 this사용이 불편(constructor를 쓰지 않으면 undefined로 나타남.)
+
+#### 6.1 setState
+
+- React에서는 이 함수가 호출되면 컴포넌트가 리렌더링 되도록 설계되어 있다.
+
+- 객체의 깊숙한곳 까지는 확인하지 못한다.
+
+  ```js
+  state = {
+    number: 0,
+    foo: {
+      bar: 0,
+      foobar: 1
+    }
+  }
+  ```
+
+  에서 아래와 같이 한다고 foobar의 값이 업데이트 되지 않는다.
+
+  ```js
+  this.setState({
+    foo: {
+      foobar: 2
+    }
+  })
+  ```
+
+  대신 기존의 foo객체가 바뀌어버린다.
+
+  따라서 다음과 같이 해 주어야 한다.
+
+  ```js
+  this.setState({
+    number: 0,
+    foo: {
+      ...this.state.foo,
+      foobar: 2
+    }
+  })
+  ```
+
+  …은 자바스크립트의 전개연산자이다. 
+
+  귀찮은 방법이므로, immutable.js 나 immer.js를 사용할 것이다.
+
+- 객체 대신 함수 전달하기 
+
+  - 비구조화 할당(destructuring assignment) : 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식. 
+
+  	```js
+  this.setState({
+    number: this.state.number + 1
+  })
+  	```
+	
+  	을 함수를 전달하는 방식으로 아래와 같이 작성할 수 있다.
+	
+  	```js
+  	this.setState(
+  		(state) => ({
+  	    number: state.number
+  	  })
+  	)
+  	```
+  	
+  	비구조화 할당을 사용하면 다음과 같이 작성할 수 있다.
+  	
+  	```js
+  	this.setState(
+  		({number}) => ({
+  	    number: number + 1
+  	  })
+  	)
+  	```
+  	
+  	잘 이용하면 아래와 같이도 사용할 수 있다.
+  	
+  	```js
+  	const { number } = this.state;
+  	this.setState({
+  	  number: number + 1
+  	})
+  	```
+  
+  
+
+### 7. 이벤트 설정
+
+React에서는 다음과 같이 이벤트를 설정한다.
+
+```js
+<button onClick={this.handleDecrease}>-</button>
+```
+
+반드시 **주의**해야 할 것은
+
+- 이벤트 이름은 lowerCamelCase로 해주어야 한다.
+- 이벤트에 전달해주는 값은 메소드`this.handleIncrease()`가 아니라 함수`this.handleIncrease`이어야 한다. 
 
