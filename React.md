@@ -61,9 +61,91 @@ $ cd [앱이름]
 $ yarn start
 ```
 
+### App.js
 
+컴포넌트를 만들기 위해서는 App.js파일을 보면 된다. 아래는 기본으로 주어지는 구조이다.
 
-```bash
+```js
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
 
+function App() {
+  
+  return (
+    <div className="App">
+      리액트
+    </div>
+  );
+}
+
+export default App;
 ```
+
+react를 불러오고 logo와 css를 불러오는 코드이다.
+
+```js
+import React from 'react';
+import logo from './logo.svg';
+import './App.css';
+```
+
+클래스를 이용해서 만드는 방법도 있는데 일단은 함수로 주어져 있으므로 함수로 진행한다.
+
+함수 내부에는 JSX를 return해주는 코드가 있어야 한다.
+
+```js
+function App() {
+  return (
+    <div className="App">
+      리액트
+    </div>
+  );
+}
+```
+
+마지막으로 우리가 작성한 컴포넌트를 다른 곳에서 불러와서 사용할 수 있도록 내보내기를 해준다.
+
+```js
+export default App;
+```
+
+
+
+### index.js
+
+기본으로 주어지는 코드는 다음과 같다.
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
+import * as serviceWorker from './serviceWorker';
+
+ReactDOM.render(<App />, document.getElementById('root'));
+serviceWorker.unregister();
+```
+
+우리가 만든 컴포넌트를 다음과 같이 불러온다.
+
+```js
+import App from './App';
+```
+
+브라우저 상에 우리의 리액트 컴포넌트를 보여주기 위해서 `ReactDOM.render` 함수를 사용한다. 첫번째 파라미터는 렌더링 할 결과물이고, 두번째는 어떤 DOM에 그릴지 정해준다. 
+
+```js
+ReactDOM.render(<App />, document.getElementById('root'));
+```
+
+위 코드의 경우는 해당 파일 안에 있는
+
+```js
+<div id="root"></div>
+```
+
+를 찾아서 렌더링 해준다.
+
+**태그는 꼭 닫혀있어야 한다. input이나 br태그도 닫아주어야 한다.**
 
