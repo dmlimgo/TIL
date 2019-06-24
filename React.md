@@ -312,3 +312,63 @@ React에서는 다음과 같이 이벤트를 설정한다.
 - 이벤트 이름은 lowerCamelCase로 해주어야 한다.
 - 이벤트에 전달해주는 값은 메소드`this.handleIncrease()`가 아니라 함수`this.handleIncrease`이어야 한다. 
 
+
+
+### 8. LifeCycle API
+
+> 컴포넌트가 브라우저에서 나타날 때, 사라질 때, 업데이트 될 때 호출되는 API이다.
+
+1. render()
+2. getSnapshotBeforeUpdate()
+3. 실제 DOM에 변화 발생
+4. componentDidUpdate
+
+#### 8.1 컴포넌트 초기 생성
+
+- constructor
+- componentWillMount (deprecated) => UNSAFE_componentWillMount
+- componentDidMount 
+
+#### 8.2 컴포넌트 업데이트
+
+- ComponentWillReceiveProps (deprecated) => UNSAFE_componentWillReceiveProps or getDerivedStateFromProps
+
+- [NEW] static getDerivedStateFromProps
+
+- shouldComponentUpdate
+
+- componentWillUpdate (deprecated) => [NEW] getSnapshotBeforeUpdate 
+
+  : DOM 변화가 일어나기 직전의 DOM 상태를 가져오고, 여기서 리턴하는 값은 componentDidUpdate에서 3번째 파라미터로 받아올 수 있다.
+
+- componentDidUpdate(prevProps, prevState, snapshot)
+
+  : 컴포넌트에서 render()를 호출하로 난 다음에 발생. 실제로 업데이트 해준다.
+
+#### 8.4 컴포넌트 제거
+
+- componentWillUnmount
+
+  : 주로 등록했었던 이벤트를 제거하고, setTimeout이나 외부라이브러리를 제거한다.
+
+#### 8.5 컴포넌트에 에러 발생
+
+- componentDidCatch
+
+
+
+### 9. input 상태 관리
+
+- input > onChange : input의 텍스트 값이 바뀔 때마다 발생하는 이벤트.
+
+- `Computed property names` 
+
+  ```js
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: e.target.value
+    })
+  }
+  ```
+
+#### 9.2 부모 컴포넌트에게 정보 전달하기
