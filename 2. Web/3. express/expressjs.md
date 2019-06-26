@@ -4,22 +4,20 @@
 
 ## 설치하기
 
-express.js를 사용하기 위해서는 node.js가 필요하다.
-
-설치되어 있다면 넘어간다.
+`node.js`가 설치되어 있지 않다면 설치 해준다.
 
 ```bash
+# macOS
 $ brew install node
+# version check
 $ node -v
 ```
 
-
-
-myapp 폴더를 만들고 들어간다.
+앱 폴더를 만들고 들어간다.
 
 ```bash
-$ mkdir myapp
-$ cd myapp
+$ mkdir [앱 이름]
+$ cd [앱 이름]
 ```
 
 
@@ -99,21 +97,18 @@ $ npm install
 app.js파일(package.json의 entry point와 같아야 함)을 만들고 아래의 내용을 입력한다.
 
 ```js
+// 모듈을 불러온다.
 let express = require("express")
+// 모듈의 인스턴스를 받아 기능들을 사용한다.
 let app = express()
 
 app.get('/', function(req, res){
     res.send('welcome back!')
 })
 
+// port를 입력하면 localhost:port로 접속할 수 있다.
 app.listen(3000)
 ```
-
-require를 통해 모듈을 불러오고
-
-app으로 모듈의 인스턴스를 받아 기능들을 사용한다.
-
-app.listen의 인자에 port를 입력하면 localhost:*port* 로 접속할 수 있다.
 
 아래의 명령어를 입력하여 서버를 실행한다.
 
