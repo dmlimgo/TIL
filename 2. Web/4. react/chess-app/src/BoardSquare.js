@@ -11,7 +11,10 @@ export default function BoardSquare({ x, y, children}) {
     const black = (x + y) % 2 === 1
     const [{isOver, canDrop}, drop] = useDrop({
         accept: ItemTypes.KNIGHT,
-        drop: () => moveKnight(x, y),
+        drop: () => {
+            moveKnight(x, y)
+            console.log(x, y)
+        },
         canDrop: () => canMoveKnight(x, y),
         collect: monitor => ({
             isOver: !!monitor.isOver(),

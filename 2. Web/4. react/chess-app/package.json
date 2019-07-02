@@ -7,7 +7,9 @@
     "react-dnd": "^8.0.3",
     "react-dnd-html5-backend": "^8.0.3",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-redux-firebase": "^2.2.6",
+    "react-scripts": "3.0.1",
+    "redux-firestore": "^0.8.0"
   },
   "scripts": {
     "start": "react-scripts start",

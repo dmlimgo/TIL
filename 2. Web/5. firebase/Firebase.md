@@ -6,9 +6,7 @@
 
 콘솔로 이동 > 프로젝트 추가
 
-![fb1](\image\fb1.PNG)
-
-
+![fb1](../../image/fb1.PNG)
 
 창이 열리면
 
@@ -86,7 +84,7 @@ vue도 위로 끌어올려주자 밑에 있으면 인식 안될수도 있음.
 
 databaseURL은 프로젝트의 아래 주소랑 같다.
 
-![fb2](C:\Users\student\Desktop\TIL\image\fb2.PNG)
+![fb2](..\..\image\fb2.PNG)
 
 projectId는 `vue-project-myeong` 이다.
 
@@ -169,7 +167,7 @@ addNewTodo: function() {
 
 삭제 코드도 변경
 
-![fb3](C:\Users\student\Desktop\TIL\image\fb3.PNG)
+![fb3](..\..\image\fb3.PNG)
 
 위에 보면 todoList 안에 키로 접근이 가능한 걸 알 수 있다.
 
@@ -354,7 +352,7 @@ $ firebase init
 
 `Database`, `Hosting` 둘다 선택
 
-![fb4](C:\Users\student\Desktop\TIL\image\fb4.PNG)
+![fb4](..\..\image\fb4.PNG)
 
 그다음 vue-project-myeong에서 엔터
 
@@ -362,7 +360,7 @@ $ firebase init
 
 설정끝.
 
-![fb5](C:\Users\student\Desktop\TIL\image\fb5.PNG)
+![fb5](..\..\image\fb5.PNG)
 
 public에 index.html을 넣어준다. (배포할 파일)
 
@@ -372,7 +370,7 @@ $ firebase deploy
 
 를 해주면 뭔가 한다. 배포끝.
 
-![fb6](C:\Users\student\Desktop\TIL\image\fb6.PNG)
+![fb6](..\..\image\fb6.PNG)
 
 Hosting URL로 접속하면 된다.
 
