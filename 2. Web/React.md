@@ -12,6 +12,10 @@
 
 1. Node.js : Webpack이나 Babel같은 도구들이 Node.js를 기반으로 만들어져 있기 때문에 설치해야 한다.
 
+   ```bash
+   $ node -v
+   ```
+
 2. Yarn : 조금 개선된 버전의 npm이라고 생각하면 된다. 더 나은 속도, 더 나은 캐싱 시스템을 사용하기 위함.
 
    ```bash
@@ -26,7 +30,7 @@
    $ yarn --version
    ```
 
-   설치 후 전역 사용에 문제가 있다면 Path 설정을 해준다.
+   macOS의 경우 설치 후 전역 사용에 문제가 있다면 Path 설정을 해준다.
 
    ```bash
    $ export PATH="$PATH:/opt/yarn-[version]/bin"

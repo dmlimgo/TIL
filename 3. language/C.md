@@ -2,6 +2,8 @@
 
 #### 1. 기본 입출력
 
+main의 두줄을 써주면 입출력이 빨라진다.
+
 ```c++
 #include <iostream>
 #include <stdio.h>
