@@ -102,7 +102,7 @@
 
 > 가창 처음에 있는 *query*를 선택해서 반환, 없으면 null 반환
 
-![js2](image\js2.PNG)
+![js2](..\image\js2.PNG)
 
 
 
