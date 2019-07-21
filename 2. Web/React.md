@@ -416,7 +416,7 @@ this.setState({
 
 
 
-### 4. 이벤트 설정
+## 4. 이벤트 설정
 
 React에서는 다음과 같이 이벤트를 설정한다.
 
@@ -431,7 +431,7 @@ React에서는 다음과 같이 이벤트를 설정한다.
 
 
 
-### 5. LifeCycle API
+## 5. LifeCycle API
 
 > 컴포넌트가 브라우저에서 나타날 때, 사라질 때, 업데이트 될 때 호출되는 API이다.
 
@@ -440,37 +440,67 @@ React에서는 다음과 같이 이벤트를 설정한다.
 3. 실제 DOM에 변화 발생
 4. componentDidUpdate
 
-#### 8.1 컴포넌트 초기 생성
+#### 5.1 컴포넌트 초기 생성
 
-- constructor
-- componentWillMount (deprecated) => UNSAFE_componentWillMount
-- componentDidMount 
+- **constructor(props)** : 컴포넌트가 새로 만들어질 때마다 이 함수가 호출된다.
 
-#### 8.2 컴포넌트 업데이트
+  ```react
+  constructor(props) {
+      super(props)
+  }
+  ```
+
+- componentWillMount (deprecated) => UNSAFE_componentWillMount 
+
+- **componentDidMount()**  : 컴포넌트가 화면에 나타나게 됐을 때 호출된다. 주로 외부 라이브러리 연동, ajax요청, DOM의 속성을 읽거나 변경하는 작업을 진행한다.
+
+#### 5.2 컴포넌트 업데이트
+
+> 컴포넌트 업데이트는 props의 변화와 state의 변화에 따라 결정된다.
 
 - ComponentWillReceiveProps (deprecated) => UNSAFE_componentWillReceiveProps or getDerivedStateFromProps
 
-- [NEW] static getDerivedStateFromProps
+- **[NEW] static getDerivedStateFromProps(nextProps, prevState)** : props로 받아온 값을 state로 동기화 하는 작업을 해줘야 하는 경우에 사용한다.
 
-- shouldComponentUpdate
+- **shouldComponentUpdate(nextProps, nextState)** : 불필요한 리렌더링을 방지하기 위한 함수이다. 기본적으로 true를 반환하므로 조건에 따라 false를 반환하게 하면 render 함수를 호출하지 않는다. 
 
-- componentWillUpdate (deprecated) => [NEW] getSnapshotBeforeUpdate 
+  ```react
+  shouldComponentUpdate(nextProps, nextState) {
+      return true;
+  }
+  ```
 
-  : DOM 변화가 일어나기 직전의 DOM 상태를 가져오고, 여기서 리턴하는 값은 componentDidUpdate에서 3번째 파라미터로 받아올 수 있다.
+- componentWillUpdate (deprecated) => getSnapshotBeforeUpdate
 
-- componentDidUpdate(prevProps, prevState, snapshot)
+- **[NEW] getSnapshotBeforeUpdate(prevProps, prevState)** : DOM 변화가 일어나기 직전의 DOM 상태를 가져오고, 여기서 리턴하는 값은 componentDidUpdate에서 3번째 파라미터로 받아올 수 있다.
+
+- **componentDidUpdate(prevProps, prevState, snapshot)**
 
   : 컴포넌트에서 render()를 호출하로 난 다음에 발생. 실제로 업데이트 해준다.
 
-#### 8.4 컴포넌트 제거
+#### 5.3 컴포넌트 제거
 
-- componentWillUnmount
+- **componentWillUnmount()**
 
   : 주로 등록했었던 이벤트를 제거하고, setTimeout이나 외부라이브러리를 제거한다.
 
-#### 8.5 컴포넌트에 에러 발생
+#### 5.5 컴포넌트에 에러 발생
 
-- componentDidCatch
+- **componentDidCatch(error, info)**
+
+  : 아래와 같이 하면 에러를 확인할 수 있다.
+
+  컴포넌트 자신의 render함수에서 발생하는 에러는 잡을 수 없지만, 자식 컴포넌트 내부에서 발생하는 에러는 잡을 수 있다.
+
+  ```react
+  componentDidCatch(error, info) {
+      this.setState({
+          error: true
+      })
+  }
+  ```
+
+  
 
 
 
