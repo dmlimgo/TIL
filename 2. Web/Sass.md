@@ -9,7 +9,7 @@ $ npm install -g node-sass
 $ node-sass -v
 ```
 
-
+--save-dev? 해야하나..
 
 ### 2. 사용하기
 
@@ -24,7 +24,7 @@ $ node-sass --output-style expanded sass폴더경로 --output css폴더경로
 ex
 
 ```bash
-$ node-sass --output-style expanded src/assets/sass -output src/assets/css
+$ node-sass --output-style expanded src/assets/sass --output src/assets/css
 ```
 
 
