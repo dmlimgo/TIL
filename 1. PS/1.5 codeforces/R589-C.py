@@ -11,7 +11,7 @@ def prime(x):
     return tmp
 def g(x, p):
     i = 0
-    ans = 0
+    ans = 1
     while True:
         pi = (p**i)
         if pi * pi > x:

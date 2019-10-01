@@ -1,6 +1,8 @@
 # DJango Local Setting
 
 > 0510 강의내용
+>
+> 0930 전체적으로 수정
 
 [pyenv github](<https://github.com/pyenv/pyenv>)
 
@@ -19,12 +21,17 @@ C:\Users\student\.pyenv\pyenv-win\shims
 C:\Users\student\.pyenv\pyenv-win\bin
 ```
 
-pyenv치면 정보가 뜬다. 업데이트 해주자. 파이썬도 업데이트된다.
-
-Disable도 해주자
+gitbash를 다시 열어주고 아래 명령어로 버전을 확인해준다.
 
 ```bash
-pyenv install 3.6.8
+pyenv --version
+pyenv rehash
+```
+
+pyenv치면 정보가 뜬다.
+
+```bash
+pyenv install 3.7.2
 ```
 
 아래 명령어로 버전 확인
@@ -63,6 +70,12 @@ source Scripts/activate
 ```
 
 한다. git 쓰기 좋아서 3.7버전씀
+
+requirement.txt에 있는 내용으로 환경설정을 할 수도 있다.
+
+```bash
+pip install -r requirement.txt
+```
 
 
 

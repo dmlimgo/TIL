@@ -37,3 +37,17 @@ sass 파일의 변경을 감지하여 변경될 때마다 자동으로 css 파�
 $ node-sass --watch sass폴더경로 --output css폴더경로
 ```
 
+
+
+### 4. 오류들
+
+django에서 설치시 특정 패키지에서 오류 발생, C컴파일러가 없을 경우 발생
+
+아래와 같이 c와 관련된걸 제외하면 된다.
+
+```bash
+pip install rcssmin --install-option="--without-c-extensions"
+pip install rjsmin --install-option="--without-c-extensions"
+pip install django-compressor --upgrade
+```
+
