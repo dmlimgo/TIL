@@ -128,7 +128,7 @@ def music_list(request):
 
 실행결과
 
-![serailizer_1](image\serailizer_1.PNG)
+![serailizer_1](../../image\serailizer_1.PNG)
 
 `Postman`에서 `GET`으로 설정해 주고 `url`란에다 붙여넣고 `Send`를 누르면 내용을 확인할 수 있다.
 

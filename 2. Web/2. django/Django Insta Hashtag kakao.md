@@ -355,3 +355,4 @@ recommend_users = User.objects.exclude(id__in=request.user.followings.all()).exc
 ```
 
 values_list는 없어야 그냥 개체가 전달된다.
+
