@@ -17,4 +17,9 @@ class FrenchDeck:
         return self._cards[position]
 
 deck = FrenchDeck()
-print(list(deck))
+print(deck.ranks)
+print(deck.suits)
+print(deck._cards[2])
+# print(list(deck))
+# print(len(deck))
+# print(deck[:3])
