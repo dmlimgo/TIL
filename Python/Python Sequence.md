@@ -3,8 +3,9 @@
 > Fluent Python 2장 공부
 
 - Sequence란?
-  - 값이 연속적으로 이어진 자료형
-
+  
+- 값이 연속적으로 이어진 자료형
+  
 - 파이썬 표준 라이브러리는 C로 구현된 시퀀스형을 제공한다.
 
   - 컨테이너 시퀀스
@@ -23,10 +24,10 @@
 - 지능형 리스트(list comprehension)를 사용하여 가독성 높은 코드를 작성하자.
 
   ```python
-  colors = ['black', 'white']
-  sizes = ['S', 'M', 'L']
-  tshirts = [(color, size) for color in colors
-            				 for size in sizes]
+  >>> colors = ['black', 'white']
+  >>> sizes = ['S', 'M', 'L']
+  >>> tshirts = [(color, size) for color in colors
+              				 for size in sizes]
   [('black', 'S'), ('white', 'S'), ('black', 'M'), ...]
   ```
 
@@ -41,15 +42,55 @@
 > 위의 지능형 리스트로 작성한 코드와 비교해보자.
 
 ```python
-colors = ['black', 'white']
-sizes = ['S', 'M', 'L']
-for tshirt in ('%s %s' % (color, size) for color in colors for size in sizes):
-    print(tshirt)
+>>> colors = ['black', 'white']
+>>> sizes = ['S', 'M', 'L']
+>>> for tshirt in ('%s %s' % (color, size) for color in colors for size in sizes):
+>>>     print(tshirt)
 black S
 black M
 black L
 white S
 white M
 white L
+```
+
+##### 
+
+#### 튜플 언패킹
+
+> 반복형 언패킹(iterable unpacking)이라는 용어가 점점 인기를 끌고 있다.
+
+```python
+lax_coordinates = (33.9425, -118.408056)
+latitue, longitude = lax_coordinates # 튜플 언패킹
+```
+
+> *을 붙여 튜플을 언패킹할 수도 있다.
+
+```python
+>>> t = (20, 8)
+>>> divmod(*t)
+(2, 4)
+```
+
+> 전통적으로 _는 gettext.gettext() 함수에 대한 별명으로 사용되었으므로, 상황에 따라 _를 더미변수로 사용하지 않아야 할 수도 있다.
+
+
+
+#### 초과 항목을 위한 * 사용
+
+> *는 단 하나의 변수에만 적용할 수 있다.
+
+```python
+>>> a, *body, c, d = range(5)
+>>> print(a, body, c, d)
+0 [1, 2] 3 4
+```
+
+```python
+>>> a, *body, *c, d = range(5)
+>>> print(a, body, c, d)
+...
+SyntaxError: two starred expressions in assignment
 ```
 
