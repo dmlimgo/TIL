@@ -26,7 +26,31 @@
 
 
 # ex expression
-name = 'Jack'
-age = 10
-print(f'{name:10}{age}')
-print(f'{name!r:10}{age}')
+# name = 'Jack'
+# age = 10
+# print(f'{name:10}{age}')
+# print(f'{name!r:10}{age}')
+
+
+# ex 2-10
+# from collections import namedtuple
+
+# City = namedtuple('City', 'name country population coordinates')
+# tokyo = City('Tokyo', 'JP', 36.933, (35.689722, 139.691667))
+# print(tokyo.population)
+# print(tokyo.coordinates)
+# print(tokyo[1])
+# print(City._fields)
+# LatLong = namedtuple('LatLong', 'lat long')
+# delhi_data = ('Delhi NCR', 'IN', 21.935, LatLong(28.613889, 77.208889))
+# delhi = City._make(delhi_data)
+# print(delhi._asdict())
+
+
+a = [1, 2, 3]
+b = ['a', 'b', 'c']
+c = (7, 8, 9)
+d = ('x', 'y', 'z')
+it = iter(c)
+print(next(it))
+print(next(it))

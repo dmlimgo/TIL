@@ -54,7 +54,7 @@ white M
 white L
 ```
 
-##### 
+
 
 #### 튜플 언패킹
 
@@ -93,4 +93,71 @@ latitue, longitude = lax_coordinates # 튜플 언패킹
 ...
 SyntaxError: two starred expressions in assignment
 ```
+
+
+
+#### 명명된 튜플(namedtuple())
+
+> 필드명과 클래스명을 추가한 튜플의 서브클래스를 생성하는 팩토리 함수
+
+```python
+>>> from collections import namedtuple
+>>> City = namedtuple('City', 'name country population coordinates')
+>>> tokyo = City('Tokyo', 'JP', 36.933, (35.689722, 139.691667))
+>>> print(tokyo.population)
+>>> print(tokyo.coordinates)
+>>> print(tokyo[1])
+36.933
+(35.689722, 139.691667)
+JP
+```
+
+- `_fields` , `_make(iterable)` , `_asdict()` 속성
+
+```python
+# _fields
+>>> print(City._fields)
+('name', 'country', 'population', 'coordinates')
+
+# _make()
+>>> LatLong = namedtuple('LatLong', 'lat long')
+>>> delhi_data = ('Delhi NCR', 'IN', 21.935, LatLong(28.613889, 77.208889))
+>>> delhi = City._make(delhi_data)
+
+# _asdict()
+>>> print(delhi._asdict())
+OrderedDict([('name', 'Delhi NCR'), ('country', 'IN'), ('population', 21.935), ('coordinates', LatLong(lat=28.613889, long=77.208889))])
+```
+
+
+
+#### 리스트와 튜플에서 볼 수 있는 메서드
+
+```python
+a = [1, 2, 3]
+b = ['a', 'b', 'c']
+c = (7, 8, 9)
+d = ('x', 'y', 'z')
+```
+
+| 메서드               | 리스트 | 튜플 | 코드                 | 결과                       |
+| -------------------- | ------ | ---- | -------------------- | -------------------------- |
+| `a.__add__(b)`       | O      | O    | `c + d`              | `[7, 8, 9, 'x', 'y', 'z']` |
+| `a.__iadd__(b)`      | O      |      | `a += b`             | `[1, 2, 3, 'a', 'b', 'c']` |
+| `a.append(e)`        | O      |      | `a.append(5)`        | `[1, 2, 3, 5]`             |
+| `a.clear()`          | O      |      | `a.clear()`          | `[]`                       |
+| `a.__contains__(e)`  | O      | O    | `5 in c`             | `False`                    |
+| `a.copy()`           | O      |      | `a.copy()`           | `[1, 2, 3]`                |
+| `a.count(e)`         | O      | O    | `c.count(7)`         | `1`                        |
+| `a.__delitem__(pos)` | O      |      | `del a[2]`           | `[1, 2]`                   |
+| `a.extend(iter)`     | O      |      | `a.extend((-1, -2))` | `[1, 2, 3, -1, -2]`        |
+|                      |        |      | `a.append((-1, -2))` | `[1, 2, 3, (-1, -2)]`      |
+| `a.__getitem__(pos)` | O      | O    | `c[1]`               | `8`                        |
+| `a.__getnewargs__()` |        | O    | 아직                 | 모르겠음                   |
+| `a.index(e)`         | O      | O    | `c.index(9)`         | `2`                        |
+| `a.insert(pos, e)`   | O      |      | `a.insert(1, 5)`     | `[1, 5, 2, 3]`             |
+| `a.__iter__()`       | O      | O    | `it = iter(c)`       |                            |
+|                      |        |      | `next(it)`           | `7`                        |
+|                      |        |      | `next(it)`           | `8`                        |
+|                      |        |      |                      |                            |
 
