@@ -51,6 +51,4 @@ a = [1, 2, 3]
 b = ['a', 'b', 'c']
 c = (7, 8, 9)
 d = ('x', 'y', 'z')
-it = iter(c)
-print(next(it))
-print(next(it))
+print(a*3)
