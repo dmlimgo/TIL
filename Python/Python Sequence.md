@@ -133,6 +133,8 @@ OrderedDict([('name', 'Delhi NCR'), ('country', 'IN'), ('population', 21.935), (
 
 #### 리스트와 튜플에서 볼 수 있는 메서드
 
+> `append()`, `pop()`등 몇가지 제외
+
 ```python
 a = [1, 2, 3]
 b = ['a', 'b', 'c']
@@ -140,27 +142,58 @@ c = (7, 8, 9)
 d = ('x', 'y', 'z')
 ```
 
-| 메서드               | 리스트 | 튜플 | 코드                 | 결과                             |
-| -------------------- | ------ | ---- | -------------------- | -------------------------------- |
-| `a.__add__(b)`       | O      | O    | `c + d`              | `[7, 8, 9, 'x', 'y', 'z']`       |
-| `a.__iadd__(b)`      | O      |      | `a += b`             | `[1, 2, 3, 'a', 'b', 'c']`       |
-| `a.append(e)`        | O      |      | `a.append(5)`        | `[1, 2, 3, 5]`                   |
-| `a.clear()`          | O      |      | `a.clear()`          | `[]`                             |
-| `a.__contains__(e)`  | O      | O    | `5 in c`             | `False`                          |
-| `a.copy()`           | O      |      | `a.copy()`           | `[1, 2, 3]`                      |
-| `a.count(e)`         | O      | O    | `c.count(7)`         | `1`                              |
-| `a.__delitem__(pos)` | O      |      | `del a[2]`           | `[1, 2]`                         |
-| `a.extend(iter)`     | O      |      | `a.extend((-1, -2))` | `[1, 2, 3, -1, -2]`              |
-|                      |        |      | `a.append((-1, -2))` | `[1, 2, 3, (-1, -2)]`            |
-| `a.__getitem__(pos)` | O      | O    | `c[1]`               | `8`                              |
-| `a.__getnewargs__()` |        | O    | 아직                 | 모르겠음                         |
-| `a.index(e)`         | O      | O    | `c.index(9)`         | `2`                              |
-| `a.insert(pos, e)`   | O      |      | `a.insert(1, 5)`     | `[1, 5, 2, 3]`                   |
-| `a.__iter__()`       | O      | O    | `it = iter(c)`       |                                  |
-|                      |        |      | `next(it)`           | `7`                              |
-|                      |        |      | `next(it)`           | `8`                              |
-| `a.__len__()`        | O      | O    | `len(c)`             | `3`                              |
-| `a.__mul__(time)`    | O      | O    | `c * 3`              | `[7, 8, 9, 7, 8, 9, 7, 8, 9]`    |
-| `a.__imul__(time)`   | O      |      | `a *= 3`             | `[1, 2, 3, 1, 2, 3, 1, 2, 3]`    |
-| `a.__rmul__(time)`   | O      | O    | `3 * c`              | 역순으로도 동작하도록하는 메서드 |
+| 메서드                 | 리스트 | 튜플 | 코드                 | 결과                             |
+| ---------------------- | ------ | ---- | -------------------- | -------------------------------- |
+| `s.__add__(b)`         | O      | O    | `c + d`              | `[7, 8, 9, 'x', 'y', 'z']`       |
+| `s.__iadd__(b)`        | O      |      | `a += b`             | `[1, 2, 3, 'a', 'b', 'c']`       |
+| `s.clear()`            | O      |      | `a.clear()`          | `[]`                             |
+| `s.__contains__(e)`    | O      | O    | `5 in c`             | `False`                          |
+| `s.copy()`             | O      |      | `a.copy()`           | `[1, 2, 3]`                      |
+| `s.count(e)`           | O      | O    | `c.count(7)`         | `1`                              |
+| `s.__delitem__(pos)`   | O      |      | `del a[2]`           | `[1, 2]`                         |
+| `s.extend(iter)`       | O      |      | `a.extend((-1, -2))` | `[1, 2, 3, -1, -2]`              |
+|                        |        |      | `a.append((-1, -2))` | `[1, 2, 3, (-1, -2)]`            |
+| `s.__getitem__(pos)`   | O      | O    | `c[1]`               | `8`                              |
+| `s.__getnewargs__()`   |        | O    | 아직                 | 모르겠음                         |
+| `s.index(e)`           | O      | O    | `c.index(9)`         | `2`                              |
+| `s.insert(pos, e)`     | O      |      | `a.insert(1, 5)`     | `[1, 5, 2, 3]`                   |
+| `s.__iter__()`         | O      | O    | `it = iter(c)`       |                                  |
+|                        |        |      | `next(it)`           | `7`                              |
+|                        |        |      | `next(it)`           | `8`                              |
+| `s.__reversed__()`     | O      | O(?) | `it = reversed(c)`   |                                  |
+|                        |        |      | `next(it)`           | `9`                              |
+|                        |        |      | `next(it)`           | `8`                              |
+| `s.__len__()`          | O      | O    | `len(c)`             | `3`                              |
+| `s.__mul__(time)`      | O      | O    | `c * 3`              | `[7, 8, 9, 7, 8, 9, 7, 8, 9]`    |
+| `s.__imul__(time)`     | O      |      | `a *= 3`             | `[1, 2, 3, 1, 2, 3, 1, 2, 3]`    |
+| `s.__rmul__(time)`     | O      | O    | `3 * c`              | 역순으로도 동작하도록하는 메서드 |
+| `s.__setitem__(pos,e)` | O      |      | `a[1] = 5`           | `[1, 5, 3]`                      |
+
+
+
+#### 슬라이싱
+
+- `a:b:c` 표기법은 `[]` 안에서만 사용할 수 있고, `slice(a, b, c)` 객체를 생성한다.
+  - `seq[start:stop:step]` 은 `seq.__getitem__(slice(start, stop, step))`을 호출한다.
+
+- 슬라이싱 활용 예제
+
+```python
+invoice = """
+0.....6.............................36........46...52....
+1909  Pimoroni PiBrella             $17.50    3    $52.50
+1489  6mm Tactile Switch x20         $4.95    2     $9.90
+1510  Panavise Jr. - PV-201         $28.00    1    $28.00
+1601  PiFTF Mini Kit 320x240        $34.95    1    $34.95
+"""
+
+SKU = slice(0, 6)
+DESCRIPTION = slice(6, 36)
+UNIT_PRICE = slice(36, 46)
+QUANTITY = slice(46, 51)
+ITEM_TOTAL = slice(51, None)
+line_items = invoice.split('\n')[2:-1]
+for item in line_items:
+    print(item[UNIT_PRICE], item[DESCRIPTION])
+```
 
