@@ -81,9 +81,16 @@
 # print(l)
 
 # ex 2-12, 2-13
-row = ['_'] * 3
-board = []
-for i in range(3):
-    board.append(row)
-board[1][0] = '*'
-print(board)
+# row = ['_'] * 3
+# board = []
+# for i in range(3):
+#     board.append(row)
+# board[1][0] = '*'
+# print(board)
+
+# ex
+a = [1, 2, 3]
+b = [4, 5]
+print(id(a), id(b))
+a += b
+print(id(a), id(b))
