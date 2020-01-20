@@ -253,3 +253,23 @@ for i in range(3):
 >
 > `a = a + b`는 `__add__()` 메서드를 호출하여 객체를 새로 생성한 후 `a`에 할당한다.
 
+
+
+#### bisect 모듈
+
+> 파이썬에서 제공하는 이진탐색 모듈이다.
+>
+> `bisect(sequence, x, lo, hi)` 의 형태로 사용하며 이미 정렬된 시퀀스에서 x가 들어가야할 위치에 대한 작업을 한다. `lo`와 `hi`로 범위를 지정해 줄 수 있으며, 시퀀스를 변형시키지 않는다.
+
+- `bisect.bisect_left(seq, x, lo=0, hi=len(seq))`
+
+  x의 위치가 경계(시퀀스 내부의 값과 일치한 경우)보다 왼쪽에 위치한다.
+
+- `bisect.bisect_right(seq, x, lo=0, hi=len(seq))`
+
+  x의 위치가 경계보다 오른쪽에 위치한다.
+
+- `bisect.bisect(seq, x, lo=0, hi=len(seq))`
+
+  `bisect.bisect_right()`와 같이 동작한다.
+
