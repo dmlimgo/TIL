@@ -273,3 +273,18 @@ for i in range(3):
 
   `bisect.bisect_right()`와 같이 동작한다.
 
+- `bisect.insort(seq, x, lo=0, hi=len(seq))`
+
+  `seq` 의 정렬을 유지한 채로 `x`를 `seq`에 삽입한다.
+
+- 간단한 예제
+
+```python
+>>> import bisect
+>>> def grade(score, breakpoints=[60, 70, 80, 90], grades='FDCBA'):
+>>>     index = bisect.bisect(breakpoints, score)
+>>>     return grades[index]
+>>> [grade(score) for score in [33, 55, 60, 75, 80, 100]]
+['F', 'F', 'D', 'C', 'B', 'A']
+```
+

@@ -89,8 +89,17 @@
 # print(board)
 
 # ex
-a = [1, 2, 3]
-b = [4, 5]
-print(id(a), id(b))
-a += b
-print(id(a), id(b))
+# a = [1, 2, 3]
+# b = [4, 5]
+# print(id(a), id(b))
+# a += b
+# print(id(a), id(b))
+
+# ex 2-18
+# import bisect
+# def grade(score, breakpoints=[60, 70, 80, 90], grades='FDCBA'):
+#     index = bisect.bisect(breakpoints, score)
+#     return grades[index]
+
+# result = [grade(score) for score in [33, 55, 60, 75, 80, 100]]
+# print(result)
