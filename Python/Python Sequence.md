@@ -288,3 +288,14 @@ for i in range(3):
 ['F', 'F', 'D', 'C', 'B', 'A']
 ```
 
+
+
+#### 리스트가 답이 아닐 때
+
+- 배열(`array.array(typecode[, initializer])`)
+
+  - 숫자들만 저장해야 한다면 리스트보다 배열이 훨씬 효율적이다.
+  - 빠르게 파일을 읽고 쓰는 `frombytes()` 와 `tofile()` 메서드를 제공한다.
+  - 배열을 생성할 때 타입코드(typecode)(C 기반 형을 결정하는 문자)를 명시해줌으로써 타입을 지정한다. 대표적으로 'b'는 signed char, 'd'는 double, 'f'는 float를 나타낸다.
+
+  - 아직 `sort()`메서드가 없으므로, `sorted()`함수를 호출해 다시 배열을 만들어야 한다.

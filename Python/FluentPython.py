@@ -103,3 +103,9 @@
 
 # result = [grade(score) for score in [33, 55, 60, 75, 80, 100]]
 # print(result)
+
+from array import array
+
+a = array('b', (4, 2, 3))
+print(a)
+print(sorted(a))
