@@ -292,10 +292,15 @@ for i in range(3):
 
 #### 리스트가 답이 아닐 때
 
-- 배열(`array.array(typecode[, initializer])`)
+- ##### 배열 (`array.array(typecode[, initializer])`)
 
   - 숫자들만 저장해야 한다면 리스트보다 배열이 훨씬 효율적이다.
   - 빠르게 파일을 읽고 쓰는 `frombytes()` 와 `tofile()` 메서드를 제공한다.
   - 배열을 생성할 때 타입코드(typecode)(C 기반 형을 결정하는 문자)를 명시해줌으로써 타입을 지정한다. 대표적으로 'b'는 signed char, 'd'는 double, 'f'는 float를 나타낸다.
 
   - 아직 `sort()`메서드가 없으므로, `sorted()`함수를 호출해 다시 배열을 만들어야 한다.
+
+- ##### 메모리뷰 (memoryview)
+  - bytes로된 객체를 복사하지 않고 다룰 수 있게 한다.
+  - 슬라이스 등과 같은 작업은 객체를 복사하므로 메모리뷰를 이용하면 시간과 메모리를 절약할 수 있다.
+  - `memoryview.cast()`는 다른 memoryview객체로 변환할 수 있고, `memoryview.toList()`는 리스트형태로 바꿔준다.
