@@ -110,6 +110,13 @@
 # print(sorted(a))
 
 
-a = bytes(b'hello')
-print(a)
-print(type(a))
+import array
+numbers = array.array('h', [-2, -1, 0, 255, 2])
+memv = memoryview(numbers)
+print(memv.tolist())
+memv_oct = memv.cast('B')
+print(memv_oct.tolist())
+memv_oct[5] = 1
+print(memv_oct.tolist())
+print(numbers)
+11111111

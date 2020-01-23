@@ -302,5 +302,27 @@ for i in range(3):
 
 - ##### 메모리뷰 (memoryview)
   - bytes로된 객체를 복사하지 않고 다룰 수 있게 한다.
+  
   - 슬라이스 등과 같은 작업은 객체를 복사하므로 메모리뷰를 이용하면 시간과 메모리를 절약할 수 있다.
-  - `memoryview.cast()`는 다른 memoryview객체로 변환할 수 있고, `memoryview.toList()`는 리스트형태로 바꿔준다.
+  
+  - `memoryview.cast()`는 다른 memoryview객체로 변환할 수 있고, `memoryview.tolist()`는 리스트형태로 바꿔준다.
+  
+    ```python
+    >>> import array
+    >>> numbers = array.array('h', [-2, -1, 0, 1, 2])
+    # memoryview 객체로 만든다.
+    >>> memv = memoryview(numbers)
+    >>> memv.tolist()
+    [-2, -1, 0, 1, 2]
+    # unsigned char로 형변환 memoryview객체를 생성한다.
+    >>> memv_oct = memv.cast('B')
+    # 음수 표현을 위해 2개의 index씩 사용한다.
+    >>> memv_oct.tolist()
+    [254, 255, 255, 255, 0, 0, 1, 0, 2, 0]
+    >>> memv_oct[5] = 4
+    # 뒷자리의 1은 실제로 256에 해당하므로 numbers[2]는 1024가 된다.
+    >>> numbers
+    array('h', [-2, -1, 1024, 1, 2])
+    ```
+  
+    
