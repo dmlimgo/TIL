@@ -302,11 +302,11 @@ for i in range(3):
 
 - ##### 메모리뷰 (memoryview)
   - bytes로된 객체를 복사하지 않고 다룰 수 있게 한다.
-  
+
   - 슬라이스 등과 같은 작업은 객체를 복사하므로 메모리뷰를 이용하면 시간과 메모리를 절약할 수 있다.
-  
+
   - `memoryview.cast()`는 다른 memoryview객체로 변환할 수 있고, `memoryview.tolist()`는 리스트형태로 바꿔준다.
-  
+
     ```python
     >>> import array
     >>> numbers = array.array('h', [-2, -1, 0, 1, 2])
@@ -324,5 +324,7 @@ for i in range(3):
     >>> numbers
     array('h', [-2, -1, 1024, 1, 2])
     ```
-  
-    
+
+- ##### NumPy와 SciPy
+
+  - 고급 배열 및 행렬 연산에 특화되어 있다. 선형대수학, 수치해석, 통계학 등의 알고리즘을 제공한다.
